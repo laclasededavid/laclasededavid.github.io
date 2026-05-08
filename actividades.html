@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Actividades — Exploradores de Palabras.">
+  <title>Actividades · Exploradores de Palabras</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo" aria-label="Inicio — Exploradores de Palabras">
+      <span class="brujula" aria-hidden="true">🧭</span> Exploradores de Palabras
+    </a>
+    <ul role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="maravillas/antiguas.html">Maravillas Antiguas</a></li>
+      <li><a href="maravillas/modernas.html">Maravillas Modernas</a></li>
+      <li><a href="poemas.html">Poemas</a></li>
+      <li><a href="actividades.html" class="activa" aria-current="page">Actividades</a></li>
+    </ul>
+  </nav>
+
+  <!-- MIGAS DE PAN -->
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <a href="index.html">Inicio</a>
+    <span aria-hidden="true">›</span>
+    <strong>Actividades</strong>
+  </nav>
+
+  <!-- BANNER -->
+  <div class="banner-seccion">
+    <h1>✏️ Actividades del explorador</h1>
+    <p>Juega con las palabras y demuestra que eres un verdadero explorador</p>
+  </div>
+
+  <main>
+    <section class="seccion" aria-labelledby="intro-actividades">
+      <h2 class="seccion-titulo" id="intro-actividades">¡Manos a la obra!</h2>
+      <p class="seccion-subtitulo">Cada actividad es una nueva aventura de palabras</p>
+      <p>Un buen explorador no solo mira y escucha: también <strong>piensa, crea y escribe</strong>. Estas actividades te ayudarán a conocer mejor las maravillas del mundo y a disfrutar de las palabras.</p>
+    </section>
+
+    <!-- ACTIVIDADES GENERALES -->
+    <section class="seccion" aria-label="Actividades generales" id="lista-actividades">
+      <!-- generado por JS -->
+    </section>
+
+    <div class="divisor" aria-hidden="true">✦ ✦ ✦</div>
+
+    <!-- ACTIVIDADES POR MARAVILLA -->
+    <section class="seccion" aria-labelledby="titulo-por-maravilla">
+      <h2 class="seccion-titulo" id="titulo-por-maravilla">Retos por maravilla</h2>
+      <p class="seccion-subtitulo">Cada maravilla tiene su propio desafío de palabras</p>
+      <div id="retos-maravillas">
+        <!-- generado por JS -->
+      </div>
+    </section>
+
+    <!-- CONSEJO FINAL -->
+    <section class="seccion" aria-labelledby="consejo-final">
+      <div class="actividad-caja">
+        <span class="icono" aria-hidden="true">🌟</span>
+        <div>
+          <p><strong id="consejo-final">Consejo de poeta:</strong> No hay respuestas incorrectas cuando escribes poesía. Lo importante es que uses tu imaginación y disfrutes jugando con las palabras. ¡Cada explorador tiene su propio estilo!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer role="contentinfo">
+    <p class="footer-logo">🧭 Exploradores de Palabras</p>
+    <p>La Clase de David · <a href="https://laclasededavid.github.io" target="_blank" rel="noopener">laclasededavid.github.io</a></p>
+    <p style="margin-top:0.4rem; opacity:0.6;">Hecho con ❤️ para 3º y 4º de Primaria</p>
+  </footer>
+
+  <script src="js/contenido.js"></script>
+  <script src="js/accesibilidad.js"></script>
+  <script>
+    // Actividades generales
+    const lista = document.getElementById('lista-actividades');
+    CONTENIDO.actividades.forEach((act, i) => {
+      const item = document.createElement('article');
+      item.className = 'actividad-item animar';
+      item.innerHTML = `
+        <span class="tipo-badge">${act.tipo}</span>
+        <h3>${i + 1}. ${act.titulo}</h3>
+        <p>${act.instrucciones}</p>
+        ${act.placeholder !== 'Tu texto del ejercicio aquí'
+          ? `<div class="curiosidad-caja" style="margin-top:0.8rem"><span class="icono">📌</span><p>${act.placeholder}</p></div>`
+          : ''}
+      `;
+      lista.appendChild(item);
+    });
+
+    // Retos por maravilla (todas)
+    const retosDiv = document.getElementById('retos-maravillas');
+    const todasMaravillas = [...CONTENIDO.antiguas, ...CONTENIDO.modernas];
+
+    todasMaravillas.forEach(m => {
+      const item = document.createElement('article');
+      item.className = 'actividad-item animar';
+      item.innerHTML = `
+        <span class="tipo-badge">Reto de maravilla</span>
+        <h3>${m.emoji} ${m.nombre} <span style="font-size:0.8rem;font-weight:400;color:var(--tinta-suave)">· ${m.pais}</span></h3>
+        <div class="actividad-caja" style="margin-top:0.6rem">
+          <span class="icono" aria-hidden="true">✏️</span>
+          <p>${m.actividad}</p>
+        </div>
+      `;
+      retosDiv.appendChild(item);
+    });
+  </script>
+</body>
+</html>

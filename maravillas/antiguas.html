@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Las 7 Maravillas del Mundo Antiguo — Poemas y actividades para primaria.">
+  <title>Maravillas Antiguas · Exploradores de Palabras</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav aria-label="Navegación principal">
+    <a href="../index.html" class="nav-logo" aria-label="Inicio — Exploradores de Palabras">
+      <span class="brujula" aria-hidden="true">🧭</span> Exploradores de Palabras
+    </a>
+    <ul role="list">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="antiguas.html" class="activa" aria-current="page">Maravillas Antiguas</a></li>
+      <li><a href="modernas.html">Maravillas Modernas</a></li>
+      <li><a href="../poemas.html">Poemas</a></li>
+      <li><a href="../actividades.html">Actividades</a></li>
+    </ul>
+  </nav>
+
+  <!-- MIGAS DE PAN -->
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <a href="../index.html">Inicio</a>
+    <span aria-hidden="true">›</span>
+    <strong>Maravillas del Mundo Antiguo</strong>
+  </nav>
+
+  <!-- BANNER -->
+  <div class="banner-seccion" role="img" aria-label="Sección: Maravillas del Mundo Antiguo">
+    <h1>🏛️ Las 7 Maravillas del Mundo Antiguo</h1>
+    <p>Monumentos legendarios que asombraron a la humanidad hace miles de años</p>
+  </div>
+
+  <!-- CONTENIDO GENERADO POR JS -->
+  <main>
+    <section class="seccion" aria-labelledby="intro-antiguas">
+      <h2 class="seccion-titulo" id="intro-antiguas">Un viaje al pasado</h2>
+      <p class="seccion-subtitulo">Siete maravillas que sobrevivieron al tiempo… y a las palabras</p>
+      <p>Los griegos antiguos elaboraron una lista de las construcciones más impresionantes que conocían. Solo una de ellas sigue en pie hoy: las Pirámides de Guiza. Las demás vivieron siglos, pero al final el tiempo las venció. Aún así, <strong>las palabras las mantienen vivas</strong>.</p>
+    </section>
+
+    <!-- TARJETAS RESUMEN -->
+    <section class="seccion" aria-label="Tarjetas de las 7 maravillas antiguas">
+      <div class="grid-maravillas" id="grid-antiguas" role="list">
+        <!-- generado por JS -->
+      </div>
+    </section>
+
+    <div class="divisor" aria-hidden="true">✦ ✦ ✦</div>
+
+    <!-- DETALLE DE CADA MARAVILLA -->
+    <section class="seccion" aria-label="Detalle de cada maravilla antigua" id="detalles-antiguas">
+      <!-- generado por JS -->
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer role="contentinfo">
+    <p class="footer-logo">🧭 Exploradores de Palabras</p>
+    <p>La Clase de David · <a href="https://laclasededavid.github.io" target="_blank" rel="noopener">laclasededavid.github.io</a></p>
+    <p style="margin-top:0.4rem; opacity:0.6;">Hecho con ❤️ para 3º y 4º de Primaria</p>
+  </footer>
+
+  <script src="../js/contenido.js"></script>
+  <script src="../js/accesibilidad.js"></script>
+  <script>
+    // Generar tarjetas resumen
+    const gridAntiguas = document.getElementById('grid-antiguas');
+    CONTENIDO.antiguas.forEach(m => {
+      const tarjeta = document.createElement('article');
+      tarjeta.className = 'tarjeta animar';
+      tarjeta.setAttribute('role', 'listitem');
+      tarjeta.innerHTML = `
+        <span class="tarjeta-emoji" aria-hidden="true">${m.emoji}</span>
+        <p class="tarjeta-pais">📍 ${m.pais}</p>
+        <h3>${m.nombre}</h3>
+        <p>${m.descripcion}</p>
+        <a href="#${m.id}" class="btn-tarjeta">Explorar →</a>
+      `;
+      gridAntiguas.appendChild(tarjeta);
+    });
+
+    // Generar detalles
+    const detalles = document.getElementById('detalles-antiguas');
+    CONTENIDO.antiguas.forEach(m => {
+      const art = document.createElement('article');
+      art.className = 'detalle-maravilla';
+      art.id = m.id;
+      art.innerHTML = `
+        <div class="encabezado">
+          <span class="emoji-grande" aria-hidden="true">${m.emoji}</span>
+          <div>
+            <p class="tarjeta-pais">📍 ${m.pais}</p>
+            <h2>${m.nombre}</h2>
+          </div>
+        </div>
+        <p>${m.descripcion}</p>
+
+        <div class="poema-caja" role="region" aria-label="Poema sobre ${m.nombre}">
+          <p class="etiqueta">📜 Poema del explorador</p>
+          ${m.poema.map(v => `<span class="poema-verso">${v}</span>`).join('')}
+        </div>
+
+        <div class="curiosidad-caja" role="note">
+          <span class="icono" aria-hidden="true">🔍</span>
+          <p><strong>¿Sabías que…?</strong> ${m.curiosidad}</p>
+        </div>
+
+        <div class="actividad-caja" role="note">
+          <span class="icono" aria-hidden="true">✏️</span>
+          <p><strong>Actividad:</strong> ${m.actividad}</p>
+        </div>
+      `;
+      detalles.appendChild(art);
+    });
+  </script>
+</body>
+</html>
