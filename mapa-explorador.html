@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El Mapa del Explorador — 12 maravillas del mundo para descubrir.">
+  <title>El Mapa del Explorador · Exploradores de Palabras</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    .mapa-seccion { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+
+    /* Contenedor del mapa: relativo para los marcadores absolutos */
+    .mapa-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin: 1.5rem auto 0;
+      border: 3px solid var(--tinta);
+      border-radius: 12px;
+      box-shadow: 6px 6px 0 var(--tinta);
+      overflow: hidden;
+      background: #e8d8a0;
+    }
+
+    /* SVG ocupa todo el ancho */
+    #mapa-svg { display: block; width: 100%; height: auto; }
+
+    /* Capa de marcadores superpuesta al SVG */
+    #marcadores-capa {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+    }
+
+    /* Cada marcador */
+    .marcador {
+      position: absolute;
+      transform: translate(-50%, -100%);
+      pointer-events: all;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform .18s;
+      z-index: 5;
+    }
+    .marcador:hover, .marcador:focus {
+      transform: translate(-50%, -100%) scale(1.3);
+      z-index: 10;
+      outline: none;
+    }
+    .marcador-pin {
+      font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+      line-height: 1;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,.45));
+    }
+    .marcador-etiqueta {
+      background: var(--tinta);
+      color: var(--dorado);
+      font-family: var(--fuente-ui);
+      font-weight: 700;
+      font-size: clamp(.5rem, .9vw, .68rem);
+      padding: 1px 5px;
+      border-radius: 3px;
+      white-space: nowrap;
+      margin-top: 2px;
+      max-width: 110px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+
+    /* Tooltip flotante */
+    #tooltip {
+      position: fixed;
+      background: var(--tinta);
+      color: var(--pergamino);
+      font-family: var(--fuente-ui);
+      font-size: .82rem;
+      padding: .45rem .9rem;
+      border-radius: 6px;
+      border: 2px solid var(--dorado);
+      pointer-events: none;
+      z-index: 999;
+      display: none;
+      box-shadow: 3px 3px 0 var(--dorado);
+      max-width: 220px;
+    }
+
+    /* Grid de leyenda */
+    .leyenda {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: .5rem;
+      margin-top: 1.5rem;
+    }
+    .leyenda-item {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      background: #fff9ee;
+      border: 1.5px solid var(--pergamino-osc);
+      border-radius: 6px;
+      padding: .4rem .8rem;
+      font-family: var(--fuente-ui);
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--tinta);
+      text-decoration: none;
+      transition: background .18s, border-color .18s;
+    }
+    .leyenda-item:hover { background: var(--dorado); border-color: var(--tinta); }
+
+    .instruccion {
+      text-align: center;
+      font-family: var(--fuente-ui);
+      font-size: .88rem;
+      color: var(--tinta-suave);
+      font-style: italic;
+      margin-bottom: .5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo"><span class="brujula" aria-hidden="true">🧭</span> Exploradores de Palabras</a>
+    <ul role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="maravillas/antiguas.html">Maravillas Antiguas</a></li>
+      <li><a href="maravillas/modernas.html">Maravillas Modernas</a></li>
+      <li><a href="mapa-explorador.html" class="activa" aria-current="page">🗺️ El Mapa del Explorador</a></li>
+      <li><a href="poemas.html">Poemas</a></li>
+      <li><a href="actividades.html">Actividades</a></li>
+    </ul>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <a href="index.html">Inicio</a> <span aria-hidden="true">›</span>
+    <strong>El Mapa del Explorador</strong>
+  </nav>
+
+  <div class="banner-seccion">
+    <h1>🗺️ El Mapa del Explorador</h1>
+    <p>Pulsa sobre una maravilla para comenzar tu aventura</p>
+  </div>
+
+  <main>
+    <section class="mapa-seccion" aria-labelledby="titulo-mapa">
+      <h2 class="seccion-titulo" id="titulo-mapa">12 maravillas te esperan</h2>
+      <p class="seccion-subtitulo">Un mapa lleno de poemas, actividades y desafíos</p>
+      <p class="instruccion">🖱️ Haz clic en cualquier marcador del mapa para explorar esa maravilla</p>
+
+      <!-- MAPA -->
+      <div class="mapa-wrap" role="img" aria-label="Mapa del mundo estilo explorador con 12 maravillas marcadas">
+
+        <!-- SVG del mapamundi estilo papiro -->
+        <svg id="mapa-svg" viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+              <stop offset="0%"   stop-color="#f2dfa0"/>
+              <stop offset="100%" stop-color="#d4b96a"/>
+            </radialGradient>
+            <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+              <path d="M50 0H0V50" fill="none" stroke="#a07820" stroke-width=".5" opacity=".35"/>
+            </pattern>
+          </defs>
+
+          <!-- Fondo -->
+          <rect width="1000" height="560" fill="url(#bg)"/>
+          <rect width="1000" height="560" fill="url(#grid)"/>
+          <!-- Bordes decorativos -->
+          <rect x="6"  y="6"  width="988" height="548" fill="none" stroke="#8a6010" stroke-width="2.5" rx="9" opacity=".7"/>
+          <rect x="12" y="12" width="976" height="536" fill="none" stroke="#8a6010" stroke-width="1"   rx="7" opacity=".35"/>
+
+          <!-- ══ MASAS DE TIERRA (simplificadas, proporciones correctas) ══ -->
+
+          <!-- América del Norte -->
+          <path d="M 55 55
+                   Q 90 40 135 45
+                   Q 175 48 205 65
+                   Q 230 80 240 105
+                   Q 248 128 235 155
+                   Q 222 178 200 188
+                   Q 175 195 152 185
+                   Q 128 175 110 158
+                   Q 88 138 72 112
+                   Q 56 86 55 65 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1.4" opacity=".85"/>
+
+          <!-- Centroamérica (istmo estrecho) -->
+          <path d="M 195 190 Q 205 200 195 215 Q 188 225 180 220 Q 175 210 183 198 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1" opacity=".85"/>
+
+          <!-- América del Sur -->
+          <path d="M 178 225
+                   Q 210 218 238 232
+                   Q 265 248 275 278
+                   Q 283 308 278 345
+                   Q 272 380 255 408
+                   Q 238 432 215 438
+                   Q 190 442 170 428
+                   Q 148 413 138 385
+                   Q 128 355 130 320
+                   Q 132 285 145 260
+                   Q 158 238 175 228 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1.4" opacity=".85"/>
+
+          <!-- Europa Occidental -->
+          <path d="M 435 55
+                   Q 465 48 490 55
+                   Q 510 62 515 78
+                   Q 518 92 508 105
+                   Q 496 117 478 120
+                   Q 460 122 446 112
+                   Q 432 102 430 85
+                   Q 428 68 435 58 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1.4" opacity=".85"/>
+
+          <!-- Escandinavia -->
+          <path d="M 468 35 Q 480 28 490 38 Q 494 48 485 52 Q 474 54 466 46 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1" opacity=".8"/>
+
+          <!-- Islas Británicas -->
+          <path d="M 420 60 Q 430 55 436 62 Q 438 70 430 74 Q 422 72 420 65 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1" opacity=".8"/>
+
+          <!-- África -->
+          <path d="M 450 132
+                   Q 480 124 505 138
+                   Q 528 152 535 182
+                   Q 540 212 534 248
+                   Q 526 285 510 315
+                   Q 493 342 472 355
+                   Q 450 364 428 352
+                   Q 406 340 394 312
+                   Q 382 282 383 250
+                   Q 383 218 393 190
+                   Q 405 158 425 143 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1.4" opacity=".85"/>
+
+          <!-- Península Arábiga -->
+          <path d="M 540 145 Q 565 138 578 155 Q 586 172 576 190 Q 562 202 546 195 Q 533 182 535 163 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1" opacity=".8"/>
+
+          <!-- Asia (gran masa) -->
+          <path d="M 518 48
+                   Q 570 38 640 42
+                   Q 710 46 768 60
+                   Q 820 74 848 100
+                   Q 868 122 860 150
+                   Q 850 175 820 185
+                   Q 785 192 745 186
+                   Q 700 178 660 170
+                   Q 618 162 578 158
+                   Q 542 154 524 140
+                   Q 510 125 512 100
+                   Q 514 74 518 52 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1.4" opacity=".85"/>
+
+          <!-- India -->
+          <path d="M 630 170 Q 648 165 660 178 Q 666 195 655 215 Q 643 228 630 220 Q 618 208 620 190 Q 622 176 630 170 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1" opacity=".85"/>
+
+          <!-- Asia Sudeste -->
+          <path d="M 750 155 Q 785 148 808 165 Q 820 180 810 198 Q 796 210 778 205 Q 758 198 750 182 Q 742 168 750 155 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1" opacity=".8"/>
+
+          <!-- Japón (islas) -->
+          <path d="M 855 80 Q 868 74 876 84 Q 879 94 870 100 Q 859 102 854 92 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1" opacity=".8"/>
+
+          <!-- Australia -->
+          <path d="M 768 310
+                   Q 808 298 845 308
+                   Q 876 318 888 345
+                   Q 896 372 882 398
+                   Q 866 422 838 430
+                   Q 808 436 780 424
+                   Q 752 410 742 382
+                   Q 732 352 742 328
+                   Q 754 312 768 310 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1.4" opacity=".85"/>
+
+          <!-- Nueva Zelanda -->
+          <path d="M 900 400 Q 910 394 916 404 Q 914 414 905 413 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1" opacity=".8"/>
+
+          <!-- Groenlandia -->
+          <path d="M 320 25 Q 355 18 378 32 Q 388 44 375 55 Q 360 62 340 56 Q 318 48 318 35 Z"
+                fill="#c9a96a" stroke="#8a6010" stroke-width="1" opacity=".7"/>
+
+          <!-- ══ OCÉANOS: etiquetas ══ -->
+          <text x="310" y="220" font-family="Georgia,serif" font-size="14" fill="#3a6080" opacity=".45" font-style="italic" transform="rotate(-8,310,220)">Océano Atlántico</text>
+          <text x="620" y="270" font-family="Georgia,serif" font-size="13" fill="#3a6080" opacity=".45" font-style="italic" transform="rotate(-5,620,270)">Océano Índico</text>
+          <text x="68"  y="310" font-family="Georgia,serif" font-size="12" fill="#3a6080" opacity=".4"  font-style="italic" transform="rotate(-12,68,310)">Pacífico</text>
+          <text x="900" y="240" font-family="Georgia,serif" font-size="12" fill="#3a6080" opacity=".4"  font-style="italic" transform="rotate(15,900,240)">Pacífico</text>
+          <text x="450" y="520" font-family="Georgia,serif" font-size="12" fill="#3a6080" opacity=".38" font-style="italic">Océano Antártico</text>
+
+          <!-- ══ Rosa de los vientos ══ -->
+          <g transform="translate(945,510)">
+            <circle r="30" fill="#f2dfa0" stroke="#8a6010" stroke-width="1.5" opacity=".9"/>
+            <text text-anchor="middle" y="-16" font-size="9" font-family="Georgia" fill="#3b2a14" font-weight="bold">N</text>
+            <text text-anchor="middle" y="22"  font-size="9" font-family="Georgia" fill="#3b2a14" font-weight="bold">S</text>
+            <text x="18"  y="4" font-size="9" font-family="Georgia" fill="#3b2a14" font-weight="bold">E</text>
+            <text x="-18" y="4" font-size="9" font-family="Georgia" fill="#3b2a14" font-weight="bold">O</text>
+            <line x1="0" y1="-24" x2="0" y2="24" stroke="#8a6010" stroke-width="1" opacity=".6"/>
+            <line x1="-24" y1="0" x2="24" y2="0" stroke="#8a6010" stroke-width="1" opacity=".6"/>
+            <polygon points="0,-24 -3,-10 0,-14 3,-10" fill="#8a6010" opacity=".9"/>
+          </g>
+
+          <!-- Título del mapa -->
+          <text x="500" y="30" text-anchor="middle" font-family="Georgia,serif" font-size="15"
+                fill="#3b2a14" font-weight="bold" letter-spacing="4" opacity=".55">MAPA DEL EXPLORADOR</text>
+        </svg>
+
+        <!-- Capa de marcadores HTML encima del SVG -->
+        <div id="marcadores-capa" aria-hidden="true"></div>
+      </div>
+
+      <!-- LEYENDA CLICABLE -->
+      <nav class="leyenda" aria-label="Lista de maravillas del mapa" id="leyenda-mapa"></nav>
+
+    </section>
+
+    <div class="divisor" aria-hidden="true">✦ ✦ ✦</div>
+
+    <section class="seccion" aria-labelledby="como-usar">
+      <h2 class="seccion-titulo" id="como-usar">¿Cómo usar el mapa?</h2>
+      <div class="intro-grid" style="margin-top:1.5rem">
+        <div class="intro-card">
+          <span class="icono" aria-hidden="true">👆</span>
+          <h3>Pulsa un marcador</h3>
+          <p>Haz clic en cualquier punto del mapa para abrir la página de esa maravilla.</p>
+        </div>
+        <div class="intro-card">
+          <span class="icono" aria-hidden="true">📜</span>
+          <h3>Lee el poema</h3>
+          <p>Cada maravilla tiene una poesía especial para leer y comprender.</p>
+        </div>
+        <div class="intro-card">
+          <span class="icono" aria-hidden="true">⭐</span>
+          <h3>Supera el desafío</h3>
+          <p>Hay tres niveles de desafío. ¿Llegarás al nivel Gran Explorador?</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="tooltip" role="tooltip"></div>
+
+  <footer role="contentinfo">
+    <p class="footer-logo">🧭 Exploradores de Palabras</p>
+    <p>La Clase de David · <a href="https://laclasededavid.github.io" target="_blank" rel="noopener">laclasededavid.github.io</a></p>
+    <p style="margin-top:.4rem;opacity:.6;">Hecho con ❤️ para 3º y 4º de Primaria</p>
+  </footer>
+
+  <script src="js/contenido.js"></script>
+  <script src="js/mapa-contenido.js"></script>
+  <script src="js/accesibilidad.js"></script>
+  <script>
+  // ── Posiciones en % sobre el SVG viewBox 1000×560 ──
+  // Colocadas manualmente en el continente correcto con margen suficiente
+  var POSICIONES = {
+    "faro-alejandria":    { x: 50.5, y: 28.0 },  // Egipto, norte de África
+    "piramides-giza":     { x: 49.0, y: 32.0 },  // Egipto, un poco más al sur
+    "jardines-babilonia": { x: 57.5, y: 30.0 },  // Irak, entre Arábiga y Asia
+    "petra":              { x: 55.5, y: 33.5 },  // Jordania
+    "taj-mahal":          { x: 64.5, y: 37.0 },  // India
+    "stonehenge":         { x: 42.5, y: 16.5 },  // Reino Unido
+    "torre-eiffel":       { x: 46.5, y: 18.5 },  // Francia
+    "gran-barrera-coral": { x: 83.5, y: 65.0 },  // Australia noreste
+    "gran-canon":         { x: 14.0, y: 23.0 },  // Arizona, EEUU
+    "machu-picchu":       { x: 22.5, y: 58.5 },  // Perú
+    "amazonia":           { x: 26.5, y: 50.0 },  // Brasil
+    "cuerpo-humano":      { x: 5.0,  y: 10.0 }   // Esquina decorativa
+  };
+
+  var capa    = document.getElementById('marcadores-capa');
+  var leyenda = document.getElementById('leyenda-mapa');
+  var tooltip = document.getElementById('tooltip');
+
+  MAPA_MARAVILLAS.forEach(function(m) {
+    var pos = POSICIONES[m.id] || { x: 50, y: 50 };
+
+    // ── Marcador ──
+    var a = document.createElement('a');
+    a.href      = 'maravillas-mapa/' + m.id + '.html';
+    a.className = 'marcador';
+    a.setAttribute('aria-label', m.nombre + ' — ' + m.pais);
+    a.style.left = pos.x + '%';
+    a.style.top  = pos.y + '%';
+    a.innerHTML  =
+      '<span class="marcador-pin">' + m.emoji + '</span>' +
+      '<span class="marcador-etiqueta">' + m.nombre + '</span>';
+
+    a.addEventListener('mouseenter', function(e) {
+      tooltip.textContent    = m.emoji + ' ' + m.nombre + ' · ' + m.pais;
+      tooltip.style.display  = 'block';
+    });
+    a.addEventListener('mousemove', function(e) {
+      tooltip.style.left = (e.clientX + 14) + 'px';
+      tooltip.style.top  = (e.clientY - 40) + 'px';
+    });
+    a.addEventListener('mouseleave', function() {
+      tooltip.style.display = 'none';
+    });
+    capa.appendChild(a);
+
+    // ── Leyenda ──
+    var lnk = document.createElement('a');
+    lnk.href      = 'maravillas-mapa/' + m.id + '.html';
+    lnk.className = 'leyenda-item';
+    lnk.innerHTML = '<span>' + m.emoji + '</span>' + m.nombre;
+    leyenda.appendChild(lnk);
+  });
+  </script>
+</body>
+</html>
