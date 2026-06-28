@@ -130,7 +130,113 @@
           <button class="criterio-tab activo" id="btn-alumnado">👤 Para el alumnado</button>
           <button class="criterio-tab"        id="btn-profesorado">👩‍🏫 Para el profesorado</button>
         </div>
-        <ul class="criterios-lista" id="lista-criterios-alumnado"></ul>
+        <ul class="criterios-lista" id="lista-criterios-alumnado">
+        <div class="area-desplegable area-lengua">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📘 Lengua Castellana y Literatura
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Lee y comprende el poema sobre Petra identificando imágenes sensoriales.</li>
+              <li>Amplía vocabulario: desfiladero, labrada, nabateo, patrimonio, arqueología.</li>
+              <li>Escribe una descripción de Petra desde el punto de vista de un explorador.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📕 Matemáticas
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Trabaja con las medidas del Siq (1 km longitud, 80 m altura) y el Tesoro (43 m).</li>
+              <li>Sitúa Petra en una línea de tiempo (construida hace 2.000 años, redescubierta en 1812).</li>
+              <li>Resuelve problemas de escala usando un plano simplificado de la ciudad.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📗 Conocimiento del Medio
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Localiza Petra en el mapa (Jordania, Oriente Medio).</li>
+              <li>Conoce las características básicas del pueblo nabateo y su forma de vida.</li>
+              <li>Comprende qué es la arqueología y cómo nos ayuda a conocer el pasado.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📓 Educación Plástica
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Representa la fachada del Tesoro de Petra usando simetría y columnas.</li>
+              <li>Experimenta con colores rosados, ocres y tierras para imitar la piedra arenisca.</li>
+              <li>Crea un relieve en arcilla o papel maché inspirado en la arquitectura nabatea.</li>
+            </ul>
+          </div>
+        </div>
+        </ul>
+        </div>
+                <div class="area-bloque area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">📕 Matemáticas</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido">
+            <ul class="criterios-lista">
+            <li>Trabaja con las medidas del Siq (1 km longitud, 80 m altura) y el Tesoro (43 m).</li>
+            <li>Sitúa Petra en una línea de tiempo (construida hace 2.000 años, redescubierta en 1812).</li>
+            <li>Resuelve problemas de escala usando un plano simplificado de la ciudad.</li>
+            </ul>
+          </div>
+        </div>
+                <div class="area-bloque area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">📗 Conocimiento del Medio</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido">
+            <ul class="criterios-lista">
+            <li>Localiza Petra en el mapa (Jordania, Oriente Medio).</li>
+            <li>Conoce las características básicas del pueblo nabateo y su forma de vida.</li>
+            <li>Comprende qué es la arqueología y cómo nos ayuda a conocer el pasado.</li>
+            </ul>
+          </div>
+        </div>
+                <div class="area-bloque area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">📓 Educación Plástica</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido">
+            <ul class="criterios-lista">
+            <li>Representa la fachada del Tesoro de Petra usando simetría y columnas.</li>
+            <li>Experimenta con colores rosados, ocres y tierras para imitar la piedra arenisca.</li>
+            <li>Crea un relieve en arcilla o papel maché inspirado en la arquitectura nabatea.</li>
+            </ul>
+          </div>
+        </div>
+        </ul>
         <ul class="criterios-lista" id="lista-criterios-profesorado" style="display:none"></ul>
       </section>
 
@@ -214,5 +320,35 @@
   <script src="../js/mapa-contenido.js"></script>
   <script src="../js/maravilla-pagina.js"></script>
   <script src="../js/accesibilidad.js"></script>
+
+  <script>
+  document.querySelectorAll('.area-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var bloque = this.closest('.area-desplegable');
+      var abierto = bloque.classList.contains('abierto');
+      document.querySelectorAll('.area-desplegable').forEach(function(b) {
+        b.classList.remove('abierto');
+        b.querySelector('.area-toggle').setAttribute('aria-expanded','false');
+      });
+      if (!abierto) {
+        bloque.classList.add('abierto');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+  </script>
+
+
+  <script>
+    // Desplegables de áreas en Criterios de Evaluación
+    document.querySelectorAll('.area-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var bloque = this.closest('.area-bloque');
+        bloque.classList.toggle('abierto');
+        var expandido = bloque.classList.contains('abierto');
+        this.setAttribute('aria-expanded', expandido);
+      });
+    });
+  </script>
 </body>
 </html>

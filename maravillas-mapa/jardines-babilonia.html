@@ -130,7 +130,113 @@
           <button class="criterio-tab activo" id="btn-alumnado">👤 Para el alumnado</button>
           <button class="criterio-tab"        id="btn-profesorado">👩‍🏫 Para el profesorado</button>
         </div>
-        <ul class="criterios-lista" id="lista-criterios-alumnado"></ul>
+        <ul class="criterios-lista" id="lista-criterios-alumnado">
+        <div class="area-desplegable area-lengua">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📘 Lengua Castellana y Literatura
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Lee y comprende el poema sobre los Jardines de Babilonia e identifica el elemento de misterio.</li>
+              <li>Deduce el significado de palabras por contexto: ancestral, donaire, eternal.</li>
+              <li>Escribe una historia breve sobre el rey y la reina de Babilonia.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📕 Matemáticas
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Sitúa los Jardines en una línea de tiempo (siglo VI a.C.) y calcula su antigüedad.</li>
+              <li>Trabaja con medidas de longitud asociadas a las terrazas escalonadas.</li>
+              <li>Clasifica las 7 maravillas antiguas de mayor a menor antigüedad aproximada.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📗 Conocimiento del Medio
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Localiza Babilonia en el mapa (actual Irak, Oriente Medio).</li>
+              <li>Distingue entre historia documentada y leyenda usando el ejemplo de los jardines.</li>
+              <li>Conoce aspectos básicos de la civilización mesopotámica.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📓 Educación Plástica
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Diseña un jardín colgante imaginario usando plantas y formas escalonadas.</li>
+              <li>Experimenta con el color verde en diferentes tonalidades para representar la vegetación.</li>
+              <li>Crea un mosaico inspirado en los motivos decorativos de la antigua Babilonia.</li>
+            </ul>
+          </div>
+        </div>
+        </ul>
+        </div>
+                <div class="area-bloque area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">📕 Matemáticas</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido">
+            <ul class="criterios-lista">
+            <li>Sitúa los Jardines en una línea de tiempo (siglo VI a.C.) y calcula su antigüedad.</li>
+            <li>Trabaja con medidas de longitud asociadas a las terrazas escalonadas.</li>
+            <li>Clasifica las 7 maravillas antiguas de mayor a menor antigüedad aproximada.</li>
+            </ul>
+          </div>
+        </div>
+                <div class="area-bloque area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">📗 Conocimiento del Medio</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido">
+            <ul class="criterios-lista">
+            <li>Localiza Babilonia en el mapa (actual Irak, Oriente Medio).</li>
+            <li>Distingue entre historia documentada y leyenda usando el ejemplo de los jardines.</li>
+            <li>Conoce aspectos básicos de la civilización mesopotámica.</li>
+            </ul>
+          </div>
+        </div>
+                <div class="area-bloque area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">📓 Educación Plástica</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido">
+            <ul class="criterios-lista">
+            <li>Diseña un jardín colgante imaginario usando plantas y formas escalonadas.</li>
+            <li>Experimenta con el color verde en diferentes tonalidades para representar la vegetación.</li>
+            <li>Crea un mosaico inspirado en los motivos decorativos de la antigua Babilonia.</li>
+            </ul>
+          </div>
+        </div>
+        </ul>
         <ul class="criterios-lista" id="lista-criterios-profesorado" style="display:none"></ul>
       </section>
 
@@ -214,5 +320,35 @@
   <script src="../js/mapa-contenido.js"></script>
   <script src="../js/maravilla-pagina.js"></script>
   <script src="../js/accesibilidad.js"></script>
+
+  <script>
+  document.querySelectorAll('.area-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var bloque = this.closest('.area-desplegable');
+      var abierto = bloque.classList.contains('abierto');
+      document.querySelectorAll('.area-desplegable').forEach(function(b) {
+        b.classList.remove('abierto');
+        b.querySelector('.area-toggle').setAttribute('aria-expanded','false');
+      });
+      if (!abierto) {
+        bloque.classList.add('abierto');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+  </script>
+
+
+  <script>
+    // Desplegables de áreas en Criterios de Evaluación
+    document.querySelectorAll('.area-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var bloque = this.closest('.area-bloque');
+        bloque.classList.toggle('abierto');
+        var expandido = bloque.classList.contains('abierto');
+        this.setAttribute('aria-expanded', expandido);
+      });
+    });
+  </script>
 </body>
 </html>

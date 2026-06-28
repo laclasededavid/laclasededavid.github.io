@@ -130,7 +130,113 @@
           <button class="criterio-tab activo" id="btn-alumnado">👤 Para el alumnado</button>
           <button class="criterio-tab"        id="btn-profesorado">👩‍🏫 Para el profesorado</button>
         </div>
-        <ul class="criterios-lista" id="lista-criterios-alumnado"></ul>
+        <ul class="criterios-lista" id="lista-criterios-alumnado">
+        <div class="area-desplegable area-lengua">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📘 Lengua Castellana y Literatura
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Lee y comprende el poema sobre el Taj Mahal identificando el tema del amor y la pérdida.</li>
+              <li>Amplía vocabulario: mármol, cúpula, mausoleo, mogol, minarete.</li>
+              <li>Escribe una carta emotiva inspirada en la historia de Shah Jahan y Mumtaz.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📕 Matemáticas
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Trabaja con los datos de construcción: 20 años, 20.000 trabajadores, 73 m de altura.</li>
+              <li>Sitúa el Taj Mahal en una línea de tiempo (1632-1653) y calcula su antigüedad.</li>
+              <li>Identifica figuras geométricas (cúpulas, arcos, rectángulos) en su arquitectura.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📗 Conocimiento del Medio
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Localiza el Taj Mahal en el mapa (Agra, India, Asia).</li>
+              <li>Conoce aspectos básicos de la cultura mogol y su legado arquitectónico.</li>
+              <li>Comprende la importancia del patrimonio de la humanidad y su conservación.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">
+              <span class="area-punto"></span>
+              📓 Educación Plástica
+            </span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-cuerpo">
+            <ul>
+              <li>Representa el Taj Mahal destacando su simetría y su cúpula central.</li>
+              <li>Experimenta con el blanco y dorado para capturar el aspecto del mármol al sol.</li>
+              <li>Diseña un jardín simétrico inspirado en los jardines del Taj Mahal.</li>
+            </ul>
+          </div>
+        </div>
+        </ul>
+        </div>
+                <div class="area-bloque area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">📕 Matemáticas</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido">
+            <ul class="criterios-lista">
+            <li>Trabaja con los datos de construcción: 20 años, 20.000 trabajadores, 73 m de altura.</li>
+            <li>Sitúa el Taj Mahal en una línea de tiempo (1632-1653) y calcula su antigüedad.</li>
+            <li>Identifica figuras geométricas (cúpulas, arcos, rectángulos) en su arquitectura.</li>
+            </ul>
+          </div>
+        </div>
+                <div class="area-bloque area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">📗 Conocimiento del Medio</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido">
+            <ul class="criterios-lista">
+            <li>Localiza el Taj Mahal en el mapa (Agra, India, Asia).</li>
+            <li>Conoce aspectos básicos de la cultura mogol y su legado arquitectónico.</li>
+            <li>Comprende la importancia del patrimonio de la humanidad y su conservación.</li>
+            </ul>
+          </div>
+        </div>
+                <div class="area-bloque area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span class="area-toggle-izq">📓 Educación Plástica</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido">
+            <ul class="criterios-lista">
+            <li>Representa el Taj Mahal destacando su simetría y su cúpula central.</li>
+            <li>Experimenta con el blanco y dorado para capturar el aspecto del mármol al sol.</li>
+            <li>Diseña un jardín simétrico inspirado en los jardines del Taj Mahal.</li>
+            </ul>
+          </div>
+        </div>
+        </ul>
         <ul class="criterios-lista" id="lista-criterios-profesorado" style="display:none"></ul>
       </section>
 
@@ -214,5 +320,35 @@
   <script src="../js/mapa-contenido.js"></script>
   <script src="../js/maravilla-pagina.js"></script>
   <script src="../js/accesibilidad.js"></script>
+
+  <script>
+  document.querySelectorAll('.area-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var bloque = this.closest('.area-desplegable');
+      var abierto = bloque.classList.contains('abierto');
+      document.querySelectorAll('.area-desplegable').forEach(function(b) {
+        b.classList.remove('abierto');
+        b.querySelector('.area-toggle').setAttribute('aria-expanded','false');
+      });
+      if (!abierto) {
+        bloque.classList.add('abierto');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+  </script>
+
+
+  <script>
+    // Desplegables de áreas en Criterios de Evaluación
+    document.querySelectorAll('.area-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var bloque = this.closest('.area-bloque');
+        bloque.classList.toggle('abierto');
+        var expandido = bloque.classList.contains('abierto');
+        this.setAttribute('aria-expanded', expandido);
+      });
+    });
+  </script>
 </body>
 </html>
