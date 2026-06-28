@@ -54,6 +54,15 @@
     .desafio-card  { background:#fff9ee; border:2px solid var(--pergamino-osc); border-radius:var(--radio); padding:1.2rem 1.5rem; margin-bottom:1rem; box-shadow:3px 3px 0 var(--pergamino-osc); }
     .desafio-nivel { font-family:var(--fuente-ui); font-size:.85rem; font-weight:700; color:var(--dorado); margin-bottom:.4rem; display:block; }
 
+    .competencia-item { background:#fff9ee; border:2px solid var(--pergamino-osc); border-radius:var(--radio); padding:1.4rem 1.6rem; margin-bottom:1.2rem; box-shadow:3px 3px 0 var(--pergamino-osc); }
+    .competencia-cabecera { display:flex; align-items:center; gap:.8rem; margin-bottom:.6rem; }
+    .competencia-num { background:var(--dorado); color:var(--tinta); font-family:var(--fuente-ui); font-size:.78rem; font-weight:900; padding:.25rem .65rem; border-radius:4px; flex-shrink:0; letter-spacing:.05em; }
+    .competencia-titulo { font-family:var(--fuente-titulo); font-size:1rem; color:var(--tinta); margin:0; }
+    .competencia-desc { font-size:.92rem; color:var(--tinta-suave); margin-bottom:.8rem; line-height:1.6; }
+    .competencia-indicadores { list-style:none; padding:0; margin:0; }
+    .competencia-indicadores li { padding:.45rem 0 .45rem 1.6rem; position:relative; border-bottom:1px solid var(--pergamino-osc); font-size:.88rem; line-height:1.5; }
+    .competencia-indicadores li::before { content:'→'; position:absolute; left:0; color:var(--dorado); font-weight:900; }
+
     .nav-maravillas { display:flex; justify-content:space-between; gap:1rem; margin-top:2rem; padding-top:1.5rem; border-top:2px dashed var(--pergamino-osc); flex-wrap:wrap; }
     .btn-nav-maravilla { display:inline-flex; align-items:center; gap:.5rem; background:var(--tinta); color:var(--pergamino); font-family:var(--fuente-ui); font-size:.85rem; font-weight:700; padding:.55rem 1.1rem; border-radius:6px; text-decoration:none; transition:background .2s; }
     .btn-nav-maravilla:hover { background:var(--dorado); color:var(--tinta); }
@@ -91,7 +100,8 @@
     <button class="pestana"        role="tab" aria-selected="false" aria-controls="panel-contenidos"   id="tab-contenidos"  data-panel="contenidos">📚 Contenidos</button>
     <button class="pestana"        role="tab" aria-selected="false" aria-controls="panel-criterios"    id="tab-criterios"   data-panel="criterios">✅ Criterios</button>
     <button class="pestana"        role="tab" aria-selected="false" aria-controls="panel-actividades"  id="tab-actividades" data-panel="actividades">✏️ Actividades</button>
-    <button class="pestana"        role="tab" aria-selected="false" aria-controls="panel-desafios"     id="tab-desafios"    data-panel="desafios">⭐ Desafíos</button>
+    <button class="pestana"        role="tab" aria-selected="false" aria-controls="panel-desafios"      id="tab-desafios"      data-panel="desafios">⭐ Desafíos</button>
+    <button class="pestana"        role="tab" aria-selected="false" aria-controls="panel-competencias"  id="tab-competencias"  data-panel="competencias">🎯 Competencias Específicas</button>
   </div>
 
   <main>
@@ -137,6 +147,55 @@
         <div class="curiosidad-caja" style="margin-top:1.5rem;">
           <span class="icono" aria-hidden="true">🌟</span>
           <p>No hay respuestas incorrectas en los desafíos creativos. ¡Lo importante es intentarlo y disfrutar!</p>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-competencias" role="tabpanel" aria-labelledby="tab-competencias" hidden>
+        <h2 class="seccion-titulo">Competencias Específicas</h2>
+        <p class="seccion-subtitulo">Competencias que se trabajan con esta maravilla</p>
+
+        <div class="competencia-item">
+          <div class="competencia-cabecera">
+            <span class="competencia-num">CE1</span>
+            <h3 class="competencia-titulo">Competencia específica 1 — [Editar nombre]</h3>
+          </div>
+          <p class="competencia-desc">Descripción de la competencia. Indica qué capacidad desarrolla el alumnado al trabajar esta maravilla. Ejemplo: comprensión lectora, expresión escrita, pensamiento crítico...</p>
+          <ul class="competencia-indicadores">
+            <li>Indicador de logro 1 — [Editar]</li>
+            <li>Indicador de logro 2 — [Editar]</li>
+            <li>Indicador de logro 3 — [Editar]</li>
+          </ul>
+        </div>
+
+        <div class="competencia-item">
+          <div class="competencia-cabecera">
+            <span class="competencia-num">CE2</span>
+            <h3 class="competencia-titulo">Competencia específica 2 — [Editar nombre]</h3>
+          </div>
+          <p class="competencia-desc">Descripción de la segunda competencia. Puedes relacionarla con Ciencias Sociales, Ciencias Naturales, Educación Artística o Valores Cívicos según la maravilla.</p>
+          <ul class="competencia-indicadores">
+            <li>Indicador de logro 1 — [Editar]</li>
+            <li>Indicador de logro 2 — [Editar]</li>
+            <li>Indicador de logro 3 — [Editar]</li>
+          </ul>
+        </div>
+
+        <div class="competencia-item">
+          <div class="competencia-cabecera">
+            <span class="competencia-num">CE3</span>
+            <h3 class="competencia-titulo">Competencia específica 3 — [Editar nombre]</h3>
+          </div>
+          <p class="competencia-desc">Descripción de la tercera competencia. Añade o elimina bloques según las necesidades de cada unidad didáctica.</p>
+          <ul class="competencia-indicadores">
+            <li>Indicador de logro 1 — [Editar]</li>
+            <li>Indicador de logro 2 — [Editar]</li>
+            <li>Indicador de logro 3 — [Editar]</li>
+          </ul>
+        </div>
+
+        <div class="curiosidad-caja" style="margin-top:1.5rem;">
+          <span class="icono" aria-hidden="true">📝</span>
+          <p><strong>Nota para el profesorado:</strong> Edita este apartado sustituyendo los textos entre corchetes <code>[Editar]</code> con las competencias específicas del currículo que correspondan a cada unidad.</p>
         </div>
       </section>
 
