@@ -58,18 +58,32 @@ const MAPA_MARAVILLAS = [
     // --- CRITERIOS DE EVALUACIÓN ---
     criterios: {
       alumnado: [
-        "Soy capaz de explicar para qué servía el Faro de Alejandría.",
-        "Puedo decir en qué país se encontraba y en qué época fue construido.",
-        "Entiendo la poesía y soy capaz de responder las preguntas de comprensión.",
-        "He realizado al menos una actividad creativa sobre esta maravilla.",
-        "Sé usar palabras nuevas aprendidas en esta sección."
+        "2.1.b. Demostrar y mantener la curiosidad sobre un tema relacionado con el medio natural, social o cultural específico y cercano, formulando preguntas y realizando predicciones razonadas.",
+        "2.2.b. Buscar, seleccionar y contrastar información, de diferentes fuentes seguras y fiables, usando los criterios de fiabilidad de fuentes, adquiriendo léxico científico básico, utilizándola en investigaciones relacionadas con el medio natural, social y cultural.",
+        "2.3.b. Diseñar y realizar experimentos guiados, cuando la investigación lo requiera, utilizando diferentes técnicas de indagación y modelos, empleando de forma segura los instrumentos y dispositivos apropiados, realizando observaciones y mediciones precisas y registrándolas correctamente.",
+        "2.4.b. Proponer posibles respuestas a las preguntas planteadas, a través del análisis e interpretación de la información y los resultados obtenidos, valorando la coherencia de las posibles soluciones, comparándolas con las predicciones realizadas.",
+        "2.5.b. Comunicar los resultados de las investigaciones adaptando el mensaje y el formato a la audiencia que va dirigido, utilizando lenguaje científico y explicando los pasos seguidos.",
+        "1.1.b. Mostrar interés y respeto a las distintas lenguas y variedades dialectales de su entorno, identificando algunas expresiones de uso cotidiano.",
+        "1.2.b. Identificar, con cierta autonomía y en contextos próximos, prejuicios y estereotipos lingüísticos frecuentes, aportando alternativas y reconociendo la diversidad lingüística de su entorno como una fuente de riqueza cultural.",
+        "1.3.b. Identificar y reconocer rasgos de la modalidad lingüística andaluza, con especial atención a las variedades del entorno del alumnado.",
+        "1.1.b. Reconocer e Interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.",
+        "1.2.b. Producir representaciones matemáticas, con recursos manipulativos y a través de esquemas o diagramas, que ayuden en la resolución de una situación problematizada, individualmente y cooperando entre iguales.",
+        "1.1.b. Reconocer propuestas artísticas de diferentes géneros, estilos, épocas y culturas, y especialmente las relacionadas con la cultura andaluza, a través de la recepción activa y mostrando curiosidad y respeto por las mismas."
+
       ],
       profesorado: [
-        "El alumno/a identifica la función del faro y lo sitúa geográficamente (Lengua / Geografía).",
-        "Comprende un texto poético y extrae información literal e inferencial (Lengua - Comprensión lectora).",
-        "Amplía su vocabulario con términos relacionados con la navegación y la arquitectura antigua (Lengua).",
-        "Muestra interés y respeto por el patrimonio histórico de otras culturas (Valores cívicos).",
-        "Produce textos creativos breves con coherencia y corrección ortográfica básica (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
