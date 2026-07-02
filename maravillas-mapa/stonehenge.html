@@ -123,7 +123,7 @@
         <ul class="contenidos-lista" id="lista-contenidos"></ul>
       </section>
 
-      <section class="panel" id="panel-criterios" role="tabpanel" aria-labelledby="tab-criterios" hidden>
+            <section class="panel" id="panel-criterios" role="tabpanel" aria-labelledby="tab-criterios" hidden>
         <h2 class="seccion-titulo">Criterios de Evaluación</h2>
         <p class="seccion-subtitulo">¿Qué hemos aprendido y cómo lo evaluamos?</p>
         <div class="criterios-tabs" role="group" aria-label="Vista de criterios">
@@ -133,14 +133,11 @@
         <ul class="criterios-lista" id="lista-criterios-alumnado">
         <div class="area-desplegable area-lengua">
           <button class="area-toggle" aria-expanded="false">
-            <span class="area-toggle-izq">
-              <span class="area-punto"></span>
-              📘 Lengua Castellana y Literatura
-            </span>
+            <span>📘 Lengua Castellana y Literatura</span>
             <span class="area-flecha" aria-hidden="true">▼</span>
           </button>
-          <div class="area-cuerpo">
-            <ul>
+          <div class="area-contenido" hidden>
+            <ul class="criterios-lista">
               <li>Lee y comprende el poema sobre Stonehenge identificando el elemento de misterio.</li>
               <li>Amplía vocabulario: prehistórico, monumento, solsticio, megalito, rituales.</li>
               <li>Escribe una teoría propia sobre el uso de Stonehenge con argumentos.</li>
@@ -149,14 +146,11 @@
         </div>
         <div class="area-desplegable area-mates">
           <button class="area-toggle" aria-expanded="false">
-            <span class="area-toggle-izq">
-              <span class="area-punto"></span>
-              📕 Matemáticas
-            </span>
+            <span>📕 Matemáticas</span>
             <span class="area-flecha" aria-hidden="true">▼</span>
           </button>
-          <div class="area-cuerpo">
-            <ul>
+          <div class="area-contenido" hidden>
+            <ul class="criterios-lista">
               <li>Trabaja con la antigüedad de Stonehenge (5.000 años) y el peso de las piedras (25 t).</li>
               <li>Comprende el concepto de solsticio relacionándolo con los ángulos del sol.</li>
               <li>Mide y compara las dimensiones del círculo de piedras usando escala.</li>
@@ -165,14 +159,11 @@
         </div>
         <div class="area-desplegable area-medio">
           <button class="area-toggle" aria-expanded="false">
-            <span class="area-toggle-izq">
-              <span class="area-punto"></span>
-              📗 Conocimiento del Medio
-            </span>
+            <span>📗 Conocimiento del Medio</span>
             <span class="area-flecha" aria-hidden="true">▼</span>
           </button>
-          <div class="area-cuerpo">
-            <ul>
+          <div class="area-contenido" hidden>
+            <ul class="criterios-lista">
               <li>Localiza Stonehenge en el mapa (Wiltshire, Reino Unido, Europa).</li>
               <li>Conoce las características básicas de la vida en la Prehistoria.</li>
               <li>Reflexiona sobre cómo los historiadores investigan cuando no hay documentos escritos.</li>
@@ -181,58 +172,14 @@
         </div>
         <div class="area-desplegable area-plastica">
           <button class="area-toggle" aria-expanded="false">
-            <span class="area-toggle-izq">
-              <span class="area-punto"></span>
-              📓 Educación Plástica
-            </span>
+            <span>📓 Educación Plástica</span>
             <span class="area-flecha" aria-hidden="true">▼</span>
           </button>
-          <div class="area-cuerpo">
-            <ul>
+          <div class="area-contenido" hidden>
+            <ul class="criterios-lista">
               <li>Representa Stonehenge usando formas rectangulares y cilíndricas en perspectiva.</li>
               <li>Experimenta con grises y texturas para imitar la piedra prehistórica.</li>
               <li>Diseña un monumento megalítico propio inspirado en Stonehenge.</li>
-            </ul>
-          </div>
-        </div>
-        </ul>
-        </div>
-                <div class="area-bloque area-mates">
-          <button class="area-toggle" aria-expanded="false">
-            <span class="area-toggle-izq">📕 Matemáticas</span>
-            <span class="area-flecha" aria-hidden="true">▼</span>
-          </button>
-          <div class="area-contenido">
-            <ul class="criterios-lista">
-            <li>Trabaja con la antigüedad de Stonehenge (5.000 años) y el peso de las piedras (25 t).</li>
-            <li>Comprende el concepto de solsticio relacionándolo con los ángulos del sol.</li>
-            <li>Mide y compara las dimensiones del círculo de piedras usando escala.</li>
-            </ul>
-          </div>
-        </div>
-                <div class="area-bloque area-medio">
-          <button class="area-toggle" aria-expanded="false">
-            <span class="area-toggle-izq">📗 Conocimiento del Medio</span>
-            <span class="area-flecha" aria-hidden="true">▼</span>
-          </button>
-          <div class="area-contenido">
-            <ul class="criterios-lista">
-            <li>Localiza Stonehenge en el mapa (Wiltshire, Reino Unido, Europa).</li>
-            <li>Conoce las características básicas de la vida en la Prehistoria.</li>
-            <li>Reflexiona sobre cómo los historiadores investigan cuando no hay documentos escritos.</li>
-            </ul>
-          </div>
-        </div>
-                <div class="area-bloque area-plastica">
-          <button class="area-toggle" aria-expanded="false">
-            <span class="area-toggle-izq">📓 Educación Plástica</span>
-            <span class="area-flecha" aria-hidden="true">▼</span>
-          </button>
-          <div class="area-contenido">
-            <ul class="criterios-lista">
-            <li>Representa Stonehenge usando formas rectangulares y cilíndricas en perspectiva.</li>
-            <li>Experimenta con grises y texturas para imitar la piedra prehistórica.</li>
-            <li>Diseña un monumento megalítico propio inspirado en Stonehenge.</li>
             </ul>
           </div>
         </div>
@@ -320,35 +267,5 @@
   <script src="../js/mapa-contenido.js"></script>
   <script src="../js/maravilla-pagina.js"></script>
   <script src="../js/accesibilidad.js"></script>
-
-  <script>
-  document.querySelectorAll('.area-toggle').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var bloque = this.closest('.area-desplegable');
-      var abierto = bloque.classList.contains('abierto');
-      document.querySelectorAll('.area-desplegable').forEach(function(b) {
-        b.classList.remove('abierto');
-        b.querySelector('.area-toggle').setAttribute('aria-expanded','false');
-      });
-      if (!abierto) {
-        bloque.classList.add('abierto');
-        this.setAttribute('aria-expanded','true');
-      }
-    });
-  });
-  </script>
-
-
-  <script>
-    // Desplegables de áreas en Criterios de Evaluación
-    document.querySelectorAll('.area-toggle').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var bloque = this.closest('.area-bloque');
-        bloque.classList.toggle('abierto');
-        var expandido = bloque.classList.contains('abierto');
-        this.setAttribute('aria-expanded', expandido);
-      });
-    });
-  </script>
 </body>
 </html>
