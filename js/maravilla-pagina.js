@@ -74,13 +74,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ── 7. Criterios ──
-  ['alumnado', 'profesorado'].forEach(function (tipo) {
-    var lista = document.getElementById('lista-criterios-' + tipo);
-    maravilla.criterios[tipo].forEach(function (c) {
-      var li = document.createElement('li');
-      li.textContent = c;
-      lista.appendChild(li);
-    });
+  // Los criterios de alumnado están en el HTML (desplegables por área).
+  // Solo poblamos profesorado desde mapa-contenido.js.
+  var listaProfes = document.getElementById('lista-criterios-profesorado');
+  maravilla.criterios['profesorado'].forEach(function (c) {
+    var li = document.createElement('li');
+    li.textContent = c;
+    listaProfes.appendChild(li);
   });
 
   // ── 8. Actividades ──
@@ -172,5 +172,19 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btn-alumnado').classList.toggle('activo',    tipo === 'alumnado');
     document.getElementById('btn-profesorado').classList.toggle('activo', tipo === 'profesorado');
   }
+
+  // ── 13. Desplegables de áreas en Criterios de Evaluación ──
+  // Usamos delegación de eventos en document para que funcione
+  // aunque el panel esté oculto cuando se ejecuta el script.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.area-toggle');
+    if (!btn) return;
+    var bloque = btn.closest('.area-desplegable');
+    if (!bloque) return;
+    var abierto = bloque.classList.toggle('abierto');
+    btn.setAttribute('aria-expanded', abierto);
+    var contenido = bloque.querySelector('.area-contenido');
+    if (contenido) contenido.hidden = !abierto;
+  });
 
 }); // fin DOMContentLoaded
