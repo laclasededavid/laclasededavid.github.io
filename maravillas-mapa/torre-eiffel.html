@@ -113,14 +113,65 @@
         <div class="poema-caja" id="intro-poema" role="region" aria-label="Poema de introducción">
           <p class="etiqueta">📜 Poema del explorador</p>
         </div>
-        <h3 style="font-family:var(--fuente-titulo);margin:1.5rem 0 1rem;font-size:1.05rem;">🗝️ Las tres pistas del explorador</h3>
+        <h3 style="font-family:var(--fuente-titulo);margin:1.5rem 0 1rem;font-size:1.05rem;">🔍 Comprensión lectora</h3>
         <div id="intro-preguntas"></div>
       </section>
 
-      <section class="panel" id="panel-contenidos" role="tabpanel" aria-labelledby="tab-contenidos" hidden>
+            <section class="panel" id="panel-contenidos" role="tabpanel" aria-labelledby="tab-contenidos" hidden>
         <h2 class="seccion-titulo">Saberes Básicos</h2>
         <p class="seccion-subtitulo">Los saberes básicos que trabajamos con esta maravilla</p>
-        <ul class="contenidos-lista" id="lista-contenidos"></ul>
+        <div class="area-desplegable area-lengua">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📘 Lengua Castellana y Literatura</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>Comprensión de textos poéticos sobre el cambio de opinión y la belleza.</li>
+              <li>Vocabulario técnico e histórico: ingeniería, remache, hierro forjado, exposición universal.</li>
+              <li>Expresión escrita: artículo de opinión y texto argumentativo.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📕 Matemáticas</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>Medidas: 330 m de altura, 18.000 piezas, 2,5 millones de remaches.</li>
+              <li>Línea del tiempo: 1887-1889, y cálculo de la antigüedad actual.</li>
+              <li>Estadística básica: 7 millones de visitantes al año, interpretación de datos.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📗 Conocimiento del Medio</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>La Exposición Universal de 1889: qué es y cuál fue su contexto histórico.</li>
+              <li>Localización de París y Francia en el mapa de Europa.</li>
+              <li>La evolución del gusto estético: cómo cambia la valoración de las obras con el tiempo.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📓 Educación Plástica</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>La estructura metálica: representación de líneas y celosías con precisión.</li>
+              <li>El negro y el gris para evocar el hierro forjado.</li>
+              <li>Diseño de una torre propia con un estilo artístico personal.</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
             <section class="panel" id="panel-criterios" role="tabpanel" aria-labelledby="tab-criterios" hidden>
@@ -138,9 +189,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>9.1.b. Formular conclusiones elementales sobre el funcionamiento de la lengua, utilizando la terminología elemental adecuada, prestando especial atención a la relación entre sustantivos, adjetivos y verbos, a partir de la observación, comparación y manipulación de palabras, enunciados y textos, en un proceso acompañado de producción o comprensión de textos en contextos significativos.</li>
-              <li>9.2.b. Revisar y mejorar los textos propios y ajenos y subsanar algunos problemas de comprensión lectora, de manera acompañada, a partir de la reflexión metalingüística e interlingüística y usando la terminología básica adecuada.</li>
-              
+              <li>Lee y comprende el poema sobre la Torre Eiffel identificando el cambio de opinión.</li>
+              <li>Amplía vocabulario: ingeniería, exposición universal, remache, hierro forjado.</li>
+              <li>Escribe un artículo de opinión sobre si la Torre Eiffel es o no una maravilla.</li>
             </ul>
           </div>
         </div>
@@ -151,8 +202,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>3.2.b. Dar ejemplos de problemas sobre situaciones cotidianas que se resuelven matemáticamente, planteando preguntas y comenzando a argumentar sobre las conclusiones.</li>
-              
+              <li>Trabaja con las medidas de la torre: 330 m altura, 18.000 piezas, 2,5 millones de remaches.</li>
+              <li>Sitúa la torre en una línea de tiempo (1887-1889) y calcula cuántos años tiene.</li>
+              <li>Interpreta datos estadísticos: 7 millones de visitantes al año.</li>
             </ul>
           </div>
         </div>
@@ -163,9 +215,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>3.1.b. Construir en equipo un producto final sencillo que dé solución a un problema de diseño, proponiendo posibles soluciones, probando diferentes prototipos y utilizando de forma segura las herramientas, técnicas y materiales adecuados.</li>
-              <li>3.2.b. Presentar el producto final de los proyectos de diseño en diferentes formatos y explicando los pasos seguidos.</li>
-              <li>3.3.b. Resolver, de forma guiada, problemas sencillos de programación, modificando algoritmos de acuerdo con los principios básicos del pensamiento computacional.</li>
+              <li>Localiza la Torre Eiffel en el mapa (París, Francia, Europa).</li>
+              <li>Conoce qué es una Exposición Universal y cuál fue el contexto histórico de 1889.</li>
+              <li>Reflexiona sobre cómo cambia la valoración de las obras a lo largo del tiempo.</li>
             </ul>
           </div>
         </div>
@@ -176,8 +228,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>4.2.b. Participar en el proceso cooperativo de producciones culturales y artísticas, de forma creativa y respetuosa, utilizando elementos básicos de diferentes lenguajes y técnicas artísticas.</li>
-              
+              <li>Representa la Torre Eiffel destacando su estructura metálica y sus arcos.</li>
+              <li>Experimenta con el negro y el gris para representar el hierro forjado.</li>
+              <li>Diseña una versión propia de la torre con un estilo artístico diferente.</li>
             </ul>
           </div>
         </div>
@@ -201,52 +254,64 @@
         </div>
       </section>
 
-      <section class="panel" id="panel-competencias" role="tabpanel" aria-labelledby="tab-competencias" hidden>
+            <section class="panel" id="panel-competencias" role="tabpanel" aria-labelledby="tab-competencias" hidden>
         <h2 class="seccion-titulo">Competencias Específicas</h2>
         <p class="seccion-subtitulo">Competencias que se trabajan con esta maravilla</p>
-
-        <div class="competencia-item">
-          <div class="competencia-cabecera">
-            <span class="competencia-num">CE1</span>
-            <h3 class="competencia-titulo">Competencia específica 1 — [Editar nombre]</h3>
+        <div class="area-desplegable area-lengua">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📘 Lengua Castellana y Literatura</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Lengua: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
           </div>
-          <p class="competencia-desc">Descripción de la competencia. Indica qué capacidad desarrolla el alumnado al trabajar esta maravilla. Ejemplo: comprensión lectora, expresión escrita, pensamiento crítico...</p>
-          <ul class="competencia-indicadores">
-            <li>Indicador de logro 1 — [Editar]</li>
-            <li>Indicador de logro 2 — [Editar]</li>
-            <li>Indicador de logro 3 — [Editar]</li>
-          </ul>
         </div>
-
-        <div class="competencia-item">
-          <div class="competencia-cabecera">
-            <span class="competencia-num">CE2</span>
-            <h3 class="competencia-titulo">Competencia específica 2 — [Editar nombre]</h3>
+        <div class="area-desplegable area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📕 Matemáticas</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Matemáticas: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
           </div>
-          <p class="competencia-desc">Descripción de la segunda competencia. Puedes relacionarla con Ciencias Sociales, Ciencias Naturales, Educación Artística o Valores Cívicos según la maravilla.</p>
-          <ul class="competencia-indicadores">
-            <li>Indicador de logro 1 — [Editar]</li>
-            <li>Indicador de logro 2 — [Editar]</li>
-            <li>Indicador de logro 3 — [Editar]</li>
-          </ul>
         </div>
-
-        <div class="competencia-item">
-          <div class="competencia-cabecera">
-            <span class="competencia-num">CE3</span>
-            <h3 class="competencia-titulo">Competencia específica 3 — [Editar nombre]</h3>
+        <div class="area-desplegable area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📗 Conocimiento del Medio</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Conocimiento del Medio: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
           </div>
-          <p class="competencia-desc">Descripción de la tercera competencia. Añade o elimina bloques según las necesidades de cada unidad didáctica.</p>
-          <ul class="competencia-indicadores">
-            <li>Indicador de logro 1 — [Editar]</li>
-            <li>Indicador de logro 2 — [Editar]</li>
-            <li>Indicador de logro 3 — [Editar]</li>
-          </ul>
         </div>
-
+        <div class="area-desplegable area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📓 Educación Plástica</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Educación Plástica: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
+          </div>
+        </div>
         <div class="curiosidad-caja" style="margin-top:1.5rem;">
           <span class="icono" aria-hidden="true">📝</span>
-          <p><strong>Nota para el profesorado:</strong> Edita este apartado sustituyendo los textos entre corchetes <code>[Editar]</code> con las competencias específicas del currículo que correspondan a cada unidad.</p>
+          <p><strong>Nota para el profesorado:</strong> Edita este apartado abriendo cada área y sustituyendo los textos entre corchetes <code>[Editar]</code> con las competencias específicas del currículo que correspondan.</p>
         </div>
       </section>
 
