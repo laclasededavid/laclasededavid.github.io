@@ -1006,28 +1006,28 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "Nadie sabe quién puso estas piedras",
-        "en círculo, mirando al sol naciente.",
-        "Son tan grandes, tan pesadas, tan buenas",
-        "que el misterio las hace más sorprendente.",
+        "Antes de escribir palabras",
+        "ya queríamos saber",
+        "por qué el sol marca los días",
+        "y la noche vuelve a nacer.",
         "",
-        "¿Templo, calendario o lugar de magia?",
-        "Hace cinco mil años alguien las movió.",
-        "Y hoy seguimos sin saber la magia",
-        "del pueblo misterioso que las colocó."
+        "Piedras que miran al cielo,",
+        "preguntas sin responder.",
+        "Así empezó la historia",
+        "de aprender y comprender."
       ],
       preguntas: [
         {
-          pregunta: "¿Cuántos años tiene Stonehenge según el poema?",
-          respuesta: "Cinco mil años."
+          pregunta: "¿Qué elementos del poema nos hacen pensar que las personas observaban el cielo para comprender el paso del tiempo?",
+          respuesta: "El sol, la noche y las piedras que miran al cielo."
         },
         {
-          pregunta: "¿Qué tres posibles funciones menciona el poema para Stonehenge?",
-          respuesta: "Templo, calendario o lugar de magia."
+          pregunta: "¿Cómo se llama una construcción formada por grandes piedras colocadas en círculo que se utilizaba para observar el cielo?",
+          respuesta: "Un círculo de piedras."
         },
         {
-          pregunta: "¿Por qué Stonehenge sigue siendo un misterio?",
-          respuesta: "Porque no se sabe quién lo construyó ni cómo movieron piedras tan grandes."
+          pregunta: "¿Qué maravilla vamos a explorar?",
+          respuesta: "Stonehenge."
         }
       ]
     },
