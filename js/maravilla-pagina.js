@@ -65,13 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ── 6. Contenidos ──
-  var listaContenidos = document.getElementById('lista-contenidos');
-  maravilla.contenidos.forEach(function (c) {
-    var li = document.createElement('li');
-    li.textContent = c;
-    listaContenidos.appendChild(li);
-  });
+  // ── 6. Saberes Básicos ──
+  // Los saberes básicos están en el HTML directamente (desplegables por área).
 
   // ── 7. Criterios ──
   // Los criterios de alumnado están en el HTML (desplegables por área).
