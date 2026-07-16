@@ -18,28 +18,28 @@ const MAPA_MARAVILLAS = [
     // --- INTRODUCCIÓN: poesía con comprensión lectora ---
     introduccion: {
       poema: [
-        "Desde lo alto del faro brillaba una llama",
-        "que al marinero perdido encontraba.",
-        "Como un abrazo de luz que te llama,",
-        "la oscuridad del océano alejaba.",
+        "No camino, pero guío,",
+        "no hablo, pero doy razón.",
+        "Cuando la noche se alarga,",
+        "soy luz y soy dirección.",
         "",
-        "Cien metros de piedra miraban al mar,",
-        "tres cuerpos apilados hacia el cielo.",
-        "Los barcos lo usaban para navegar,",
-        "era el más alto faro del suelo."
+        "Observo mares lejanos,",
+        "preguntas llegan a mí.",
+        "Si buscas saber y método,",
+        "tal vez empieces aquí."
       ],
       preguntas: [
         {
-          pregunta: "¿Para qué servía el faro según el poema?",
-          respuesta: "Para guiar a los marineros perdidos en el mar."
+          pregunta: "¿Qué elemento del poema ayuda a las personas cuando están perdidas durante la noche?",
+          respuesta: "Una luz que sirve para orientar y guiar el camino."
         },
         {
-          pregunta: "¿Qué dos palabras del poema riman entre sí en la primera estrofa?",
-          respuesta: "«llama» con «llama» (y «encontraba» con «alejaba»)."
+          pregunta: "¿Qué construcción famosa, situada junto al mar, utilizaba una gran luz para indicar el camino a los navegantes?",
+          respuesta: "Un faro."
         },
         {
-          pregunta: "¿Cuántos cuerpos o partes tenía el faro según el poema?",
-          respuesta: "Tres cuerpos apilados."
+          pregunta: "¿Qué maravilla del mundo vamos a explorar hoy?",
+          respuesta: "El Faro de Alejandría."
         }
       ]
     },
@@ -58,18 +58,11 @@ const MAPA_MARAVILLAS = [
     // --- CRITERIOS DE EVALUACIÓN ---
     criterios: {
       alumnado: [
-        "2.1.b. Demostrar y mantener la curiosidad sobre un tema relacionado con el medio natural, social o cultural específico y cercano, formulando preguntas y realizando predicciones razonadas.",
-        "2.2.b. Buscar, seleccionar y contrastar información, de diferentes fuentes seguras y fiables, usando los criterios de fiabilidad de fuentes, adquiriendo léxico científico básico, utilizándola en investigaciones relacionadas con el medio natural, social y cultural.",
-        "2.3.b. Diseñar y realizar experimentos guiados, cuando la investigación lo requiera, utilizando diferentes técnicas de indagación y modelos, empleando de forma segura los instrumentos y dispositivos apropiados, realizando observaciones y mediciones precisas y registrándolas correctamente.",
-        "2.4.b. Proponer posibles respuestas a las preguntas planteadas, a través del análisis e interpretación de la información y los resultados obtenidos, valorando la coherencia de las posibles soluciones, comparándolas con las predicciones realizadas.",
-        "2.5.b. Comunicar los resultados de las investigaciones adaptando el mensaje y el formato a la audiencia que va dirigido, utilizando lenguaje científico y explicando los pasos seguidos.",
-        "1.1.b. Mostrar interés y respeto a las distintas lenguas y variedades dialectales de su entorno, identificando algunas expresiones de uso cotidiano.",
-        "1.2.b. Identificar, con cierta autonomía y en contextos próximos, prejuicios y estereotipos lingüísticos frecuentes, aportando alternativas y reconociendo la diversidad lingüística de su entorno como una fuente de riqueza cultural.",
-        "1.3.b. Identificar y reconocer rasgos de la modalidad lingüística andaluza, con especial atención a las variedades del entorno del alumnado.",
-        "1.1.b. Reconocer e Interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.",
-        "1.2.b. Producir representaciones matemáticas, con recursos manipulativos y a través de esquemas o diagramas, que ayuden en la resolución de una situación problematizada, individualmente y cooperando entre iguales.",
-        "1.1.b. Reconocer propuestas artísticas de diferentes géneros, estilos, épocas y culturas, y especialmente las relacionadas con la cultura andaluza, a través de la recepción activa y mostrando curiosidad y respeto por las mismas."
-
+        "Soy capaz de explicar para qué servía el Faro de Alejandría.",
+        "Puedo decir en qué país se encontraba y en qué época fue construido.",
+        "Entiendo la poesía y soy capaz de responder las preguntas de comprensión.",
+        "He realizado al menos una actividad creativa sobre esta maravilla.",
+        "Sé usar palabras nuevas aprendidas en esta sección."
       ],
       profesorado: [
         "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
@@ -138,28 +131,29 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "Llevas contigo la mayor maravilla,",
-        "no está en el mar ni en la cima nevada.",
-        "Es una máquina que late y brilla,",
-        "dentro de ti, siempre despierta, nunca cansada.",
+        "Dos brazos miden el mundo,",
+        "un latido marca el compás,",
+        "soy mapa, soy equilibrio,",
+        "soy ciencia y arte a la vez.",
         "",
-        "Huesos y músculos, sangre y latido,",
-        "ojos que ven y pulmones que respiran.",
-        "Todo en su sitio, todo bien unido,",
-        "¡la maravilla que tú mismo habitas!"
+        "Me muevo, siento y aprendo,",
+        "conmigo empiezas a explorar.",
+        "Antes de viajar muy lejos,",
+        "mírate… y empieza a pensar.",
+        
       ],
       preguntas: [
         {
-          pregunta: "Según el poema, ¿dónde está la mayor maravilla?",
-          respuesta: "Dentro de nosotros mismos, en el propio cuerpo."
+          pregunta: "¿Qué elemento del poema nos hace pensar que dentro de nosotros hay algo que marca el ritmo de la vida?",
+          respuesta: "Un latido que marca el compás."
         },
         {
-          pregunta: "¿Con qué compara el cuerpo el poema?",
-          respuesta: "Con una máquina que late y brilla."
+          pregunta: "En nuestro cuerpo existe un \"tambor\" que nunca deja de sonar. ¿Qué órgano crees que representa esa pista del poema?",
+          respuesta: "El corazón."
         },
         {
-          pregunta: "Nombra tres partes del cuerpo que aparecen en el poema.",
-          respuesta: "Huesos, músculos, ojos, pulmones, sangre (cualquiera de ellos)."
+          pregunta: "¿Qué maravilla del mundo vamos a explorar?",
+          respuesta: "El cuerpo humano."
         }
       ]
     },
@@ -183,11 +177,18 @@ const MAPA_MARAVILLAS = [
         "Cuido mi cuerpo y entiendo la importancia de hábitos saludables."
       ],
       profesorado: [
-        "El alumno/a identifica y nombra correctamente los principales órganos y sistemas del cuerpo (Ciencias Naturales).",
-        "Comprende un texto poético y extrae información literal e inferencial (Lengua - Comprensión lectora).",
-        "Relaciona el funcionamiento del cuerpo humano con hábitos de vida saludable (Valores y Salud).",
-        "Amplía vocabulario científico básico sobre el cuerpo (Lengua / Ciencias).",
-        "Produce textos descriptivos o creativos sobre el cuerpo con corrección básica (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -240,28 +241,29 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "Ciudad de nubes, ciudad escondida,",
-        "entre cóndores y viento serrano.",
-        "Los incas tejieron tu piedra vivida",
-        "con manos de sol y de amor andino.",
+        "Entre montañas despierto,",
+        "donde la tierra es hogar,",
+        "aquí se cuida el cuerpo,",
+        "como se cuida el lugar.",
         "",
-        "Quinientos años dormiste en silencio,",
-        "la selva te abrazó con su manto verde.",
-        "Pero el mundo encontró tu rincón intenso",
-        "y hoy nadie te olvida ni te pierde."
+        "Alimento y equilibrio,",
+        "naturaleza y razón.",
+        "Si comer también es arte,",
+        "aquí empieza la lección.",
+        
       ],
       preguntas: [
         {
-          pregunta: "¿Por qué se dice que Machu Picchu «durmió» quinientos años?",
-          respuesta: "Porque estuvo abandonada y escondida entre la selva sin que el mundo la conociera."
+          pregunta: "¿Qué dos elementos del poema nos ayudan a descubrir que este lugar está rodeado por la naturaleza y que en él se cultivaban alimentos?",
+          respuesta: "Las montañas y la tierra."
         },
         {
-          pregunta: "¿Qué pájaro aparece en el poema relacionado con Machu Picchu?",
-          respuesta: "El cóndor."
+          pregunta: "¿Qué lugar puede construirse entre montañas para que las personas vivan, cultiven alimentos y cuiden la naturaleza?",
+          respuesta: "Un pueblo o una ciudad."
         },
         {
-          pregunta: "¿Quiénes construyeron Machu Picchu según el poema?",
-          respuesta: "Los incas."
+          pregunta: "¿Qué maravilla del mundo vamos a explorar?",
+          respuesta: "Machu Picchu."
         }
       ]
     },
@@ -285,11 +287,18 @@ const MAPA_MARAVILLAS = [
         "He realizado una actividad creativa o geográfica sobre Machu Picchu."
       ],
       profesorado: [
-        "El alumno/a localiza Machu Picchu en el mapa y conoce su contexto histórico (Geografía / Historia).",
-        "Comprende un texto poético y extrae información literal e inferencial (Lengua - Comprensión lectora).",
-        "Reconoce la importancia del patrimonio histórico y cultural de otras civilizaciones (Valores / Ciudadanía global).",
-        "Amplía vocabulario con términos geográficos e históricos (Lengua / Ciencias Sociales).",
-        "Expresa ideas con creatividad en producciones escritas o plásticas (Lengua / Educación artística)."
+       "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -342,28 +351,29 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "Bajo el mar hay un jardín de colores",
-        "que ningún pintor podría imaginar.",
-        "Corales, peces y mil resplandores",
-        "bailan juntos sin parar de soñar.",
+        "Bajo un manto de colores",
+        "nadan historias sin voz,",
+        "aletas, escamas y sueños",
+        "bailan sin explicación.",
         "",
-        "Es tan grande que se ve desde el cielo,",
-        "dos mil kilómetros de vida y de calma.",
-        "Pero el mar se calienta, se rompe ese velo,",
-        "y necesita que cuidemos su alma."
+        "Si miras con ojos atentos",
+        "verás vida en cada rincón,",
+        "un mundo oculto y diverso",
+        "que pide tu protección.",
+        
       ],
       preguntas: [
         {
-          pregunta: "¿Cuántos kilómetros de extensión tiene la Gran Barrera según el poema?",
-          respuesta: "Dos mil kilómetros."
+          pregunta: "¿Qué elementos del poema nos hacen pensar que habla de un lugar lleno de vida bajo el agua?",
+          respuesta: "Las aletas, las escamas y un mundo lleno de vida."
         },
         {
-          pregunta: "¿Por qué dice el poema que «necesita que cuidemos su alma»?",
-          respuesta: "Porque el calentamiento del mar está dañando la barrera de coral."
+          pregunta: "¿Cómo se llaman las grandes formaciones que viven bajo el mar y sirven de hogar a miles de animales marinos?¿Cómo se llaman las grandes formaciones que viven bajo el mar y sirven de hogar a miles de animales marinos?",
+          respuesta: "Los corales."
         },
         {
-          pregunta: "¿Con qué compara el poema la Gran Barrera de Coral?",
-          respuesta: "Con un jardín de colores bajo el mar."
+          pregunta: "¿Qué maravilla del mundo vamos a explorar?",
+          respuesta: "La Gran Barrera de Coral."
         }
       ]
     },
@@ -387,11 +397,18 @@ const MAPA_MARAVILLAS = [
         "He realizado una actividad creativa o científica sobre esta maravilla."
       ],
       profesorado: [
-        "El alumno/a localiza la Gran Barrera de Coral y conoce su importancia ecológica (Ciencias Naturales / Geografía).",
-        "Comprende un texto poético con mensaje medioambiental (Lengua - Comprensión lectora).",
-        "Reflexiona sobre el impacto del cambio climático en los ecosistemas (Ciencias / Valores).",
-        "Amplía vocabulario científico: arrecife, biodiversidad, pólipo, ecosistema (Lengua / Ciencias).",
-        "Produce textos argumentativos o creativos sobre el medioambiente (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -444,28 +461,28 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "Flores y ríos subían por el aire,",
-        "verdes cascadas de un sueño ancestral.",
-        "¿Existió de verdad o fue solo un donaire",
-        "de la memoria del mundo eternal?",
+        "Crezco sin tocar el suelo,",
+        "subo buscando el sol,",
+        "mis hojas cuentan secretos",
+        "de paciencia y dedicación.",
         "",
-        "Una reina lloraba lejos de su tierra",
-        "y un rey quiso traerle el jardín perdido.",
-        "Entre mitos y leyendas se encierra",
-        "el misterio más verde jamás conocido."
+        "Si plantas bien una idea,",
+        "despacio la verás crecer.",
+        "Hoy exploramos la vida",
+        "que sabe esperar y florecer."
       ],
       preguntas: [
         {
-          pregunta: "¿Por qué el poema pregunta «¿Existió de verdad?»?",
-          respuesta: "Porque los Jardines de Babilonia son tan misteriosos que algunos historians dudan de si realmente existieron."
+          pregunta: "¿Qué elementos del poema nos hacen pensar que habla de un lugar donde las plantas crecen y la naturaleza es la protagonista?",
+          respuesta: "Las hojas, el sol, las plantas y el crecimiento."
         },
         {
-          pregunta: "¿Quién mandó construir los jardines según el poema?",
-          respuesta: "Un rey, para una reina que lloraba lejos de su tierra."
+          pregunta: "¿Cómo se llama el lugar donde crecen muchas plantas, flores y árboles cuidados por las personas?",
+          respuesta: "Un jardín."
         },
         {
-          pregunta: "¿Qué palabra del poema significa «antiguo» o «muy viejo»?",
-          respuesta: "«Ancestral»."
+          pregunta: "¿Qué maravilla vamos a explorar?",
+          respuesta: "Los Jardines Colgantes de Babilonia."
         }
       ]
     },
@@ -489,11 +506,18 @@ const MAPA_MARAVILLAS = [
         "He creado algo (texto, dibujo, historia) inspirado en esta maravilla."
       ],
       profesorado: [
-        "El alumno/a distingue entre historia y leyenda, y comprende el concepto de misterio histórico (Historia / Pensamiento crítico).",
-        "Comprende un texto poético y deduce el significado de palabras por contexto (Lengua - Comprensión lectora).",
-        "Amplía vocabulario con términos históricos y poéticos: ancestral, mito, leyenda, excavación (Lengua).",
-        "Muestra respeto e interés por las culturas de la Antigüedad (Valores / Ciudadanía global).",
-        "Produce textos creativos con coherencia narrativa (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -546,28 +570,28 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "La tierra abrió sus brazos de roca",
-        "y el río Colorado se coló.",
-        "Millones de años, gota a gota,",
-        "este abismo inmenso esculpió.",
+        "El tiempo escribió en mi piel",
+        "con viento, agua y calor,",
+        "capa a capa va contando",
+        "historias del mundo en flor.",
         "",
-        "Rojo, naranja, ocre y violeta,",
-        "capas de tiempo pintadas al viento.",
-        "El Gran Cañón guarda una paleta",
-        "de colores que el tiempo ha hecho lento."
+        "No corro, pero transformo,",
+        "no hablo, pero sé enseñar",
+        "que el clima y la tierra juntos",
+        "nunca dejan de cambiar."
       ],
       preguntas: [
         {
-          pregunta: "¿Qué río creó el Gran Cañón según el poema?",
-          respuesta: "El río Colorado."
+          pregunta: "¿Qué elementos del poema nos hacen pensar que la naturaleza puede transformar un paisaje con el paso del tiempo?",
+          respuesta: "El viento, el agua, el calor, el clima y la tierra."
         },
         {
-          pregunta: "¿Cuánto tiempo tardó en formarse el Gran Cañón?",
-          respuesta: "Millones de años."
+          pregunta: "¿Cómo se llama el gran paisaje de roca que se forma durante millones de años gracias a la acción del agua, el viento y el tiempo?",
+          respuesta: "Un cañón."
         },
         {
-          pregunta: "¿Qué colores menciona el poema al describir el Gran Cañón?",
-          respuesta: "Rojo, naranja, ocre y violeta."
+          pregunta: "¿Qué maravilla vamos a explorar?",
+          respuesta: "El Gran Cañón."
         }
       ]
     },
@@ -591,11 +615,18 @@ const MAPA_MARAVILLAS = [
         "He realizado una actividad creativa o científica sobre el Gran Cañón."
       ],
       profesorado: [
-        "El alumno/a comprende procesos naturales lentos (erosión, geología) y los relaciona con la formación del cañón (Ciencias Naturales).",
-        "Comprende un texto poético y extrae información (Lengua - Comprensión lectora).",
-        "Localiza el Gran Cañón en el mapa y lo relaciona con su contexto geográfico (Geografía).",
-        "Amplía vocabulario con términos geológicos y naturales: erosión, sedimento, cañón, capas (Lengua / Ciencias).",
-        "Valora la naturaleza como patrimonio común que hay que proteger (Valores / Ciudadanía)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -648,28 +679,28 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "El pulmón verde del mundo respira",
-        "bajo un cielo de pájaros y lluvia.",
-        "Millones de árboles tejen y gira",
-        "la vida más rica que el tiempo dibuia.",
+        "Millones de voces verdes",
+        "susurran sin hacer ruido,",
+        "todo está unido a todo,",
+        "nada vive dividido.",
         "",
-        "Jaguares y ranas, ríos y flores,",
-        "colores que el ojo no puede contar.",
-        "La Amazonia guarda todos los colores",
-        "que la Tierra quiso en ella guardar."
+        "Si escuchas con atención",
+        "aprenderás la lección:",
+        "cuidar lo que nos rodea",
+        "es cuidar el corazón."
       ],
       preguntas: [
         {
-          pregunta: "¿Por qué llaman a la Amazonia «el pulmón verde del mundo»?",
-          respuesta: "Porque produce muchísimo oxígeno gracias a sus millones de árboles."
+          pregunta: "¿Qué elementos del poema nos hacen pensar que habla de un lugar donde viven muchos seres vivos que dependen unos de otros?",
+          respuesta: "Las voces verdes, la unión entre todos los seres vivos y la importancia de cuidar la naturaleza."
         },
         {
-          pregunta: "Nombra dos animales que aparecen en el poema.",
-          respuesta: "Jaguares y ranas."
+          pregunta: "¿Cómo se llama el gran bosque donde viven miles de plantas y animales formando un mismo ecosistema?",
+          respuesta: "Una selva."
         },
         {
-          pregunta: "¿Qué elementos del poema describen la riqueza de la Amazonia?",
-          respuesta: "Los árboles, pájaros, ríos, flores y colores que menciona."
+          pregunta: "¿Qué maravilla vamos a explorar?",
+          respuesta: "La Amazonía."
         }
       ]
     },
@@ -693,11 +724,18 @@ const MAPA_MARAVILLAS = [
         "He producido un texto creativo o reflexivo sobre la naturaleza."
       ],
       profesorado: [
-        "El alumno/a comprende la importancia de la Amazonia como ecosistema global (Ciencias Naturales / Geografía).",
-        "Comprende un texto poético con mensaje medioambiental y extrae información (Lengua - Comprensión lectora).",
-        "Reflexiona críticamente sobre la deforestación y sus consecuencias (Ciencias / Valores).",
-        "Amplía vocabulario: deforestación, biodiversidad, ecosistema, selva tropical (Lengua / Ciencias).",
-        "Produce textos argumentativos o creativos sobre el medioambiente (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -750,28 +788,28 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "La ciudad que nació dentro de la piedra,",
-        "labrada por manos que ya no están.",
-        "El desierto la guarda, la vela, la medra,",
-        "rosada de aurora, al morir el día van.",
+        "Tallada en roca y silencio,",
+        "ciudad de arena y pasar,",
+        "aquí el ser humano aprende",
+        "a convivir y a habitar.",
         "",
-        "Por un desfiladero angosto y secreto",
-        "se llega al Tesoro de piedra rosada.",
-        "Un pueblo de piedra, un pueblo completo,",
-        "que el tiempo en silencio ha conservado."
+        "Calles, pueblos y caminos",
+        "cuentan quiénes somos hoy.",
+        "El mundo también se escribe",
+        "con las huellas que dejo yo."
       ],
       preguntas: [
         {
-          pregunta: "¿De qué material están hechos los edificios de Petra?",
-          respuesta: "De piedra (tallada directamente en la roca)."
+          pregunta: "¿Qué elementos del poema nos hacen pensar que habla de un lugar construido por las personas y lleno de historia?",
+          respuesta: "La roca, la ciudad, las calles, los pueblos y los caminos."
         },
         {
-          pregunta: "¿Cómo se llega al Tesoro según el poema?",
-          respuesta: "Por un desfiladero angosto y secreto."
+          pregunta: "¿Cómo se llama un lugar donde viven las personas y encontramos calles, edificios y espacios para convivir?",
+          respuesta: "Una ciudad."
         },
         {
-          pregunta: "¿De qué color es la piedra de Petra?",
-          respuesta: "Rosada."
+          pregunta: "¿Qué maravilla vamos a explorar?",
+          respuesta: "Petra."
         }
       ]
     },
@@ -795,11 +833,18 @@ const MAPA_MARAVILLAS = [
         "He creado un texto o proyecto creativo inspirado en esta maravilla."
       ],
       profesorado: [
-        "El alumno/a sitúa Petra en el mapa y conoce su contexto histórico y cultural (Geografía / Historia).",
-        "Comprende un texto poético y extrae información (Lengua - Comprensión lectora).",
-        "Muestra interés y respeto por las civilizaciones antiguas de Oriente Medio (Valores / Ciudadanía global).",
-        "Amplía vocabulario: nabateo, desfiladero, tallado, patrimonio (Lengua / Ciencias Sociales).",
-        "Produce textos creativos con riqueza descriptiva (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -852,28 +897,28 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "Blanco como la luna en el río,",
-        "el Taj Mahal refleja el amor.",
-        "Un rey construyó este sueño vacío",
-        "para guardar de su reina el fulgor.",
+        "No todo lo que construimos",
+        "es solo para usar,",
+        "hay cosas que nos recuerdan",
+        "lo que debemos cuidar.",
         "",
-        "Veinte años de trabajo y de mármol",
-        "dieron forma al amor más eterno.",
-        "Y hoy el mundo contempla el milagro",
-        "de un palacio vestido de invierno."
+        "Si consumes sin pensar,",
+        "el mundo puede doler.",
+        "Hoy exploramos un reto:",
+        "elegir bien qué hacer."
       ],
       preguntas: [
         {
-          pregunta: "¿Por qué construyó el rey el Taj Mahal?",
-          respuesta: "En memoria de su reina, por amor."
+          pregunta: "¿Qué elementos del poema nos hacen pensar que algunas construcciones pueden transmitir valores y enseñanzas además de tener una utilidad?",
+          respuesta: "Las construcciones, el cuidado, la importancia de elegir bien y proteger lo que tenemos."
         },
         {
-          pregunta: "¿Cuántos años tardaron en construirlo según el poema?",
-          respuesta: "Veinte años."
+          pregunta: "¿Cómo llamamos a una gran construcción creada por las personas para recordar algo importante o expresar un sentimiento?",
+          respuesta: "Un monumento."
         },
         {
-          pregunta: "¿Con qué color y material relaciona el poema el Taj Mahal?",
-          respuesta: "Con el color blanco y el mármol."
+          pregunta: "¿Qué maravilla vamos a explorar?",
+          respuesta: "El Taj Mahal."
         }
       ]
     },
@@ -897,11 +942,18 @@ const MAPA_MARAVILLAS = [
         "He producido un texto o creación inspirado en el amor y la arquitectura."
       ],
       profesorado: [
-        "El alumno/a sitúa el Taj Mahal en el mapa y conoce su contexto histórico y cultural (Geografía / Historia).",
-        "Comprende un texto poético y extrae información (Lengua - Comprensión lectora).",
-        "Conoce y respeta la cultura y patrimonio de India (Valores / Ciudadanía global).",
-        "Amplía vocabulario: mármol, cúpula, mogol, mausoleo (Lengua / Ciencias Sociales).",
-        "Produce textos creativos o emotivos con corrección básica (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -999,11 +1051,18 @@ const MAPA_MARAVILLAS = [
         "He producido un texto creativo o reflexivo sobre Stonehenge."
       ],
       profesorado: [
-        "El alumno/a sitúa Stonehenge en el mapa y lo relaciona con la Prehistoria (Historia / Geografía).",
-        "Comprende un texto poético y extrae información literal e inferencial (Lengua - Comprensión lectora).",
-        "Desarrolla el pensamiento crítico ante un misterio histórico (Pensamiento crítico / Historia).",
-        "Amplía vocabulario: prehistórico, monumento, solsticio, rituales (Lengua / Ciencias Sociales).",
-        "Produce textos argumentativos o creativos con corrección básica (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -1101,11 +1160,18 @@ const MAPA_MARAVILLAS = [
         "He realizado una actividad creativa o histórica sobre las pirámides."
       ],
       profesorado: [
-        "El alumno/a sitúa las pirámides en Egipto y las relaciona con la civilización del Antiguo Egipto (Historia / Geografía).",
-        "Comprende un texto poético y extrae información (Lengua - Comprensión lectora).",
-        "Conoce aspectos básicos de la civilización egipcia: faraones, creencias, monumentos (Historia).",
-        "Amplía vocabulario: faraón, esfinge, arqueología, sarcófago (Lengua / Historia).",
-        "Produce textos creativos o históricos con corrección básica (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
@@ -1203,11 +1269,18 @@ const MAPA_MARAVILLAS = [
         "He producido un texto creativo relacionado con la Torre Eiffel."
       ],
       profesorado: [
-        "El alumno/a sitúa la Torre Eiffel en el mapa y conoce su historia (Geografía / Historia).",
-        "Comprende un texto poético y extrae información (Lengua - Comprensión lectora).",
-        "Reflexiona sobre el juicio estético y cómo cambia con el tiempo (Valores / Educación artística).",
-        "Amplía vocabulario: ingeniería, hierro, exposición universal, monumento (Lengua / Ciencias Sociales).",
-        "Produce textos creativos o argumentativos con corrección básica (Lengua - Expresión escrita)."
+        "I.E.1. Realiza una evaluación inicial diagnóstica que permita ajustar la programación educativa, identificando las necesidades, habilidades y conocimientos previos del alumnado.",
+        "I.E.2. Emplea de manera sistemática diversos procedimientos e instrumentos de recogida de información, tanto cualitativos como cuantitativos, para obtener datos precisos sobre el progreso.",
+        "I.E.3. Diseña y proporciona situaciones de aprendizaje que favorezcan el desarrollo de la afectividad, promoviendo la empatía, la autoestima y las relaciones interpersonales.",
+        "I.E.4. Evalúa de forma continua e integral el planteamiento, desarrollo y resultados de las propuestas didácticas implementadas, asegurando su efectividad y p respecto a los objetivos establecidos.",
+        "I.E.5. Diseña situaciones de aprendizaje que faciliten la comprensión del tema, activando conocimientos previos y generando interés.",
+        "I.E.6. Comunica de manera clara y explícita los objetivos de aprendizaje, destacando su importancia, funcionalidad y relevancia en la vida cotidiana del alumnado, fomentando la motivación.",
+        "I.E.7. Emplea una variedad de técnicas de evaluación, con el fin de obtener una valoración integral de su desempeño.",
+        "I.E.8. Implementa estrategias y procedimientos de autoevaluación y coevaluación, promoviendo la reflexión crítica.",
+        "I.E.9. Planifica las unidades didácticas de manera flexible, favoreciendo una enseñanza adaptativa.",
+        "I.E.10. Coordina la planificación y desarrollo de las actividades educativas de forma colaborativa con el equipo docente.",
+        "I.E.11. Adapta las estrategias de enseñanza y programa las actividades en función de las competencias, garantizando su alineación con los criterios y saberes.",
+        "I.E.12. Utiliza diversos medios y canales de comunicación para informar de manera efectiva a las familias, al profesorado y al alumnado sobre el progreso educativo."
       ]
     },
 
