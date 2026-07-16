@@ -113,14 +113,65 @@
         <div class="poema-caja" id="intro-poema" role="region" aria-label="Poema de introducción">
           <p class="etiqueta">📜 Poema del explorador</p>
         </div>
-        <h3 style="font-family:var(--fuente-titulo);margin:1.5rem 0 1rem;font-size:1.05rem;">🗝️ Las tres pistas del explorador</h3>
+        <h3 style="font-family:var(--fuente-titulo);margin:1.5rem 0 1rem;font-size:1.05rem;">🔍 Comprensión lectora</h3>
         <div id="intro-preguntas"></div>
       </section>
 
-      <section class="panel" id="panel-contenidos" role="tabpanel" aria-labelledby="tab-contenidos" hidden>
+            <section class="panel" id="panel-contenidos" role="tabpanel" aria-labelledby="tab-contenidos" hidden>
         <h2 class="seccion-titulo">Saberes Básicos</h2>
         <p class="seccion-subtitulo">Los saberes básicos que trabajamos con esta maravilla</p>
-        <ul class="contenidos-lista" id="lista-contenidos"></ul>
+        <div class="area-desplegable area-lengua">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📘 Lengua Castellana y Literatura</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>Comprensión de textos poéticos: identificación del tema, rima y recursos literarios.</li>
+              <li>Vocabulario específico: faro, llama, marinero, horizonte, navegación.</li>
+              <li>Expresión escrita: descripción de monumentos y lugares históricos.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📕 Matemáticas</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>Medidas de longitud: el metro y sus múltiplos (el faro medía más de 100 m).</li>
+              <li>Números grandes: decenas de miles en contexto histórico.</li>
+              <li>Nociones de cronología: ordenar hechos en el tiempo.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📗 Conocimiento del Medio</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>Localización geográfica: Egipto, mar Mediterráneo, continente africano.</li>
+              <li>La luz como fuente de orientación: faros y navegación en la Antigüedad.</li>
+              <li>Las 7 Maravillas del Mundo Antiguo: contexto histórico y cultural.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📓 Educación Plástica</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>Formas geométricas básicas aplicadas a la arquitectura (cilindro, prisma, octógono).</li>
+              <li>El color cálido: amarillo, naranja y rojo para representar luz y fuego.</li>
+              <li>Técnicas de representación de monumentos: proporción y escala básica.</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
             <section class="panel" id="panel-criterios" role="tabpanel" aria-labelledby="tab-criterios" hidden>
@@ -138,11 +189,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-        
-              <li>1.1.b. Mostrar interés y respeto a las distintas lenguas y variedades dialectales de su entorno, identificando algunas expresiones de uso cotidiano.</li>
-              <li>1.2.b. Identificar, con cierta autonomía y en contextos próximos, prejuicios y estereotipos lingüísticos frecuentes, aportando alternativas y reconociendo la diversidad lingüística de su entorno como una fuente de riqueza cultural.</li>
-              <li>1.3.b. Identificar y reconocer rasgos de la modalidad lingüística andaluza, con especial atención a las variedades del entorno del alumnado.</li>
-            
+              <li>Lee y comprende el poema del Faro de Alejandría identificando su tema principal.</li>
+              <li>Localiza información literal e inferencial en textos sobre el faro.</li>
+              <li>Escribe una descripción breve del Faro usando vocabulario específico aprendido.</li>
             </ul>
           </div>
         </div>
@@ -153,9 +202,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>1.1.b. Reconocer e Interpretar, de forma verbal o gráfica, problemas de la vida cotidiana, comprendiendo las preguntas planteadas a través de diferentes estrategias o herramientas, incluidas las tecnológicas, e interpretar mensajes verbales, escritos o visuales.</li>
-              <li>1.2.b. Producir representaciones matemáticas, con recursos manipulativos y a través de esquemas o diagramas, que ayuden en la resolución de una situación problematizada, individualmente y cooperando entre iguales.</li>
-              
+              <li>Resuelve problemas de medida relacionados con la altura del faro (más de 100 m).</li>
+              <li>Trabaja con números grandes asociados a la construcción del faro.</li>
+              <li>Ordena cronológicamente las maravillas del mundo antiguo usando líneas de tiempo.</li>
             </ul>
           </div>
         </div>
@@ -166,12 +215,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>2.1.b. Demostrar y mantener la curiosidad sobre un tema relacionado con el medio natural, social o cultural específico y cercano, formulando preguntas y realizando predicciones razonadas.</li>
-              <li>2.2.b. Buscar, seleccionar y contrastar información, de diferentes fuentes seguras y fiables, usando los criterios de fiabilidad de fuentes, adquiriendo léxico científico básico, utilizándola en investigaciones relacionadas con el medio natural, social y cultural.</li>
-              <li>2.3.b. Diseñar y realizar experimentos guiados, cuando la investigación lo requiera, utilizando diferentes técnicas de indagación y modelos, empleando de forma segura los instrumentos y dispositivos apropiados, realizando observaciones y mediciones precisas y registrándolas correctamente.</li>
-              <li>2.4.b. Proponer posibles respuestas a las preguntas planteadas, a través del análisis e interpretación de la información y los resultados obtenidos, valorando la coherencia de las posibles soluciones, comparándolas con las predicciones realizadas.</li>
-              <li>2.5.b. Comunicar los resultados de las investigaciones adaptando el mensaje y el formato a la audiencia que va dirigido, utilizando lenguaje científico y explicando los pasos seguidos.</li>
-              
+              <li>Sitúa el Faro de Alejandría en el mapa (Egipto, mar Mediterráneo).</li>
+              <li>Conoce la función del faro como guía para la navegación marítima.</li>
+              <li>Relaciona el faro con el concepto de fuente de luz y su importancia en la Antigüedad.</li>
             </ul>
           </div>
         </div>
@@ -182,8 +228,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>1.1.b. Reconocer propuestas artísticas de diferentes géneros, estilos, épocas y culturas, y especialmente las relacionadas con la cultura andaluza, a través de la recepción activa y mostrando curiosidad y respeto por las mismas.</li>
-              
+              <li>Representa el Faro de Alejandría usando técnicas plásticas básicas.</li>
+              <li>Utiliza formas geométricas para diseñar su propio faro imaginario.</li>
+              <li>Experimenta con colores cálidos (luz, fuego) para ilustrar la llama del faro.</li>
             </ul>
           </div>
         </div>
@@ -207,52 +254,64 @@
         </div>
       </section>
 
-      <section class="panel" id="panel-competencias" role="tabpanel" aria-labelledby="tab-competencias" hidden>
+            <section class="panel" id="panel-competencias" role="tabpanel" aria-labelledby="tab-competencias" hidden>
         <h2 class="seccion-titulo">Competencias Específicas</h2>
         <p class="seccion-subtitulo">Competencias que se trabajan con esta maravilla</p>
-
-        <div class="competencia-item">
-          <div class="competencia-cabecera">
-            <span class="competencia-num">CE1</span>
-            <h3 class="competencia-titulo">Competencia específica 1 — [Editar nombre]</h3>
+        <div class="area-desplegable area-lengua">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📘 Lengua Castellana y Literatura</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Lengua: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
           </div>
-          <p class="competencia-desc">Descripción de la competencia. Indica qué capacidad desarrolla el alumnado al trabajar esta maravilla. Ejemplo: comprensión lectora, expresión escrita, pensamiento crítico...</p>
-          <ul class="competencia-indicadores">
-            <li>Indicador de logro 1 — [Editar]</li>
-            <li>Indicador de logro 2 — [Editar]</li>
-            <li>Indicador de logro 3 — [Editar]</li>
-          </ul>
         </div>
-
-        <div class="competencia-item">
-          <div class="competencia-cabecera">
-            <span class="competencia-num">CE2</span>
-            <h3 class="competencia-titulo">Competencia específica 2 — [Editar nombre]</h3>
+        <div class="area-desplegable area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📕 Matemáticas</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Matemáticas: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
           </div>
-          <p class="competencia-desc">Descripción de la segunda competencia. Puedes relacionarla con Ciencias Sociales, Ciencias Naturales, Educación Artística o Valores Cívicos según la maravilla.</p>
-          <ul class="competencia-indicadores">
-            <li>Indicador de logro 1 — [Editar]</li>
-            <li>Indicador de logro 2 — [Editar]</li>
-            <li>Indicador de logro 3 — [Editar]</li>
-          </ul>
         </div>
-
-        <div class="competencia-item">
-          <div class="competencia-cabecera">
-            <span class="competencia-num">CE3</span>
-            <h3 class="competencia-titulo">Competencia específica 3 — [Editar nombre]</h3>
+        <div class="area-desplegable area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📗 Conocimiento del Medio</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Conocimiento del Medio: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
           </div>
-          <p class="competencia-desc">Descripción de la tercera competencia. Añade o elimina bloques según las necesidades de cada unidad didáctica.</p>
-          <ul class="competencia-indicadores">
-            <li>Indicador de logro 1 — [Editar]</li>
-            <li>Indicador de logro 2 — [Editar]</li>
-            <li>Indicador de logro 3 — [Editar]</li>
-          </ul>
         </div>
-
+        <div class="area-desplegable area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📓 Educación Plástica</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Educación Plástica: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
+          </div>
+        </div>
         <div class="curiosidad-caja" style="margin-top:1.5rem;">
           <span class="icono" aria-hidden="true">📝</span>
-          <p><strong>Nota para el profesorado:</strong> Edita este apartado sustituyendo los textos entre corchetes <code>[Editar]</code> con las competencias específicas del currículo que correspondan a cada unidad.</p>
+          <p><strong>Nota para el profesorado:</strong> Edita este apartado abriendo cada área y sustituyendo los textos entre corchetes <code>[Editar]</code> con las competencias específicas del currículo que correspondan.</p>
         </div>
       </section>
 
