@@ -1115,28 +1115,28 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "Tres gigantes de arena y de sol,",
-        "que el viento no pudo borrar.",
-        "Mil secretos guarda el faraón",
-        "bajo el manto del arenal.",
+        "Gigantes de piedra y tiempo",
+        "guardan secretos de ayer,",
+        "reyes, ríos y escritura",
+        "querían el mundo entender.",
         "",
-        "Cuatro mil años mirando al desierto,",
-        "la única maravilla que el tiempo respetó.",
-        "El Nilo las vio nacer, el mundo las ha visto,",
-        "y la Esfinge en silencio todo lo guardó."
+        "Cada símbolo cuenta algo,",
+        "cada muro una lección.",
+        "Viajar al pasado es leer",
+        "la historia con atención."
       ],
       preguntas: [
         {
-          pregunta: "¿Cuántas pirámides se mencionan en el poema?",
-          respuesta: "Tres (tres gigantes)."
+          pregunta: "¿Qué elementos del poema nos hacen pensar que habla de una civilización muy antigua que dejó grandes construcciones y quiso comprender el mundo?",
+          respuesta: "Los gigantes de piedra, los reyes, los ríos, la escritura y los símbolos."
         },
         {
-          pregunta: "¿Cuántos años llevan las pirámides mirando al desierto según el poema?",
-          respuesta: "Cuatro mil años."
+          pregunta: "¿Cómo se llama una gran construcción de piedra con forma triangular que construyeron los antiguos egipcios?",
+          respuesta: "Una pirámide."
         },
         {
-          pregunta: "¿Qué monumento guarda el silencio junto a las pirámides?",
-          respuesta: "La Esfinge."
+          pregunta: "¿Qué maravilla vamos a explorar?",
+          respuesta: "Las Pirámides de Giza."
         }
       ]
     },
