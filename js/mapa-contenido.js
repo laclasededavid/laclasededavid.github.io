@@ -1224,28 +1224,28 @@ const MAPA_MARAVILLAS = [
 
     introduccion: {
       poema: [
-        "De hierro y de sueños se alzó en el cielo",
-        "la torre más alta que París había visto.",
-        "Gustave Eiffel extendió su vuelo",
-        "y el mundo entero quedó convicto.",
+        "De hierro, ideas y sueños",
+        "se levanta hacia el cielo,",
+        "símbolo de lo que avanza",
+        "cuando el saber tiene vuelo.",
         "",
-        "La llamaron fea, la quisieron tirar,",
-        "pero el tiempo la volvió la más bella.",
-        "Hoy millones de ojos la quieren mirar",
-        "y nadie imagina París sin ella."
+        "Miramos lo ya aprendido",
+        "para poder imaginar",
+        "que el futuro se construye",
+        "con ganas de mejorar."
       ],
       preguntas: [
         {
-          pregunta: "¿Quién construyó la Torre Eiffel según el poema?",
-          respuesta: "Gustave Eiffel."
+          pregunta: "¿Qué elementos del poema nos hacen pensar que habla de una gran construcción creada por las personas y que representa el progreso?",
+          respuesta: "El hierro, las ideas, los sueños, el saber y el futuro."
         },
         {
-          pregunta: "¿Cómo reaccionó la gente al principio ante la Torre Eiffel?",
-          respuesta: "La llamaron fea y quisieron tirarla."
+          pregunta: "¿Cómo se llama una construcción muy alta, levantada con hierro, que permite contemplar una ciudad desde las alturas?",
+          respuesta: "Una torre."
         },
         {
-          pregunta: "¿Qué cambió con el tiempo según el poema?",
-          respuesta: "El tiempo la convirtió en la más bella y ahora millones la admiran."
+          pregunta: "¿Qué maravilla vamos a explorar?",
+          respuesta: "La Torre Eiffel."
         }
       ]
     },
