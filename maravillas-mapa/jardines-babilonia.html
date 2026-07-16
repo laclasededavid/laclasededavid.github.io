@@ -113,14 +113,65 @@
         <div class="poema-caja" id="intro-poema" role="region" aria-label="Poema de introducción">
           <p class="etiqueta">📜 Poema del explorador</p>
         </div>
-        <h3 style="font-family:var(--fuente-titulo);margin:1.5rem 0 1rem;font-size:1.05rem;">🗝️ Las tres pistas del explorador</h3>
+        <h3 style="font-family:var(--fuente-titulo);margin:1.5rem 0 1rem;font-size:1.05rem;">🔍 Comprensión lectora</h3>
         <div id="intro-preguntas"></div>
       </section>
 
-      <section class="panel" id="panel-contenidos" role="tabpanel" aria-labelledby="tab-contenidos" hidden>
+            <section class="panel" id="panel-contenidos" role="tabpanel" aria-labelledby="tab-contenidos" hidden>
         <h2 class="seccion-titulo">Saberes Básicos</h2>
         <p class="seccion-subtitulo">Los saberes básicos que trabajamos con esta maravilla</p>
-        <ul class="contenidos-lista" id="lista-contenidos"></ul>
+        <div class="area-desplegable area-lengua">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📘 Lengua Castellana y Literatura</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>Comprensión de textos poéticos con elementos de misterio y leyenda.</li>
+              <li>Vocabulario histórico y literario: ancestral, mito, leyenda, irrigación.</li>
+              <li>Expresión escrita: narración de una historia de amor en la Antigüedad.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📕 Matemáticas</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>La línea del tiempo: el siglo VI a.C. y el cálculo de antigüedad.</li>
+              <li>Medidas de altura y superficie aplicadas a jardines y terrazas.</li>
+              <li>Clasificación y ordenación cronológica de las maravillas antiguas.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📗 Conocimiento del Medio</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>La civilización mesopotámica: Babilonia, el río Éufrates y la escritura cuneiforme.</li>
+              <li>Los sistemas de irrigación en la Antigüedad: cómo llevaban el agua a las plantas.</li>
+              <li>Historia y leyenda: cómo distinguir fuentes históricas de relatos legendarios.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="area-desplegable area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📓 Educación Plástica</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>El color verde: mezclas, tonalidades y representación de la vegetación.</li>
+              <li>Diseño de jardines: composición, simetría y elementos naturales.</li>
+              <li>El mosaico: técnica decorativa de la antigua Mesopotamia.</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
             <section class="panel" id="panel-criterios" role="tabpanel" aria-labelledby="tab-criterios" hidden>
@@ -138,9 +189,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>6.1.b. Localizar, seleccionar y contrastar información de distintas fuentes, con especial atención a las digitales, citándolas, evaluando su fiabilidad y recreándolas mediante la adaptación creativa de modelos.</li>
-              <li>6.2.b. Compartir, de manera creativa, los resultados de un proceso de investigación sencillo, individual o grupal, sobre algún tema de interés personal o ecosocial, realizado de manera progresivamente autónoma.</li>
-              <li>6.3.b. Adoptar hábitos sencillos de uso crítico, seguro, sostenible y saludable de las tecnologías digitales en relación con la búsqueda y la comunicación de la información, de manera progresivamente autónoma.</li>
+              <li>Lee y comprende el poema sobre los Jardines identificando el elemento de misterio.</li>
+              <li>Deduce el significado de palabras por contexto: ancestral, donaire, eternal.</li>
+              <li>Escribe una historia breve sobre el rey y la reina de Babilonia.</li>
             </ul>
           </div>
         </div>
@@ -151,9 +202,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>5.1.b. Realizar conexiones entre los diferentes elementos matemáticos, aplicando conocimientos y experiencias propias, resolviendo situaciones matemáticas en su contexto cotidiano.</li>
-              <li>5.2.b. Identificar e interpretar situaciones en contextos diversos, reconociendo las conexiones entre las matemáticas y la vida cotidiana, interpretando la información gráfica de diferentes medios y su interrelación con situaciones contextuales.</li>
-              
+              <li>Sitúa los Jardines en una línea de tiempo (siglo VI a.C.) y calcula su antigüedad.</li>
+              <li>Trabaja con medidas de longitud asociadas a las terrazas escalonadas.</li>
+              <li>Clasifica las 7 maravillas antiguas de mayor a menor antigüedad aproximada.</li>
             </ul>
           </div>
         </div>
@@ -164,9 +215,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>5.1.b. Identificar las características, la organización y las propiedades de los elementos del medio natural, social y cultural, a través de metodologías de indagación, utilizando las herramientas y procesos adecuados, comprendiendo y valorando su riqueza y diversidad.</li>
-              <li>5.2.b. Identificar conexiones sencillas entre diferentes elementos del medio natural, social y cultural, mostrando comprensión de las relaciones que se establecen y de los cambios y adaptaciones protagonizadas por los seres humanos a través del tiempo, para sus necesidades y las distintas organizaciones sociales que han ido desarrollándose.</li>
-              <li>5.3.b. Valorar y proteger el patrimonio natural y cultural, considerándolo un bien común, adoptando conductas respetuosas para su disfrute y proponiendo acciones para su conservación y mejora.</li>
+              <li>Localiza Babilonia en el mapa (actual Irak, Oriente Medio).</li>
+              <li>Distingue entre historia documentada y leyenda usando el ejemplo de los jardines.</li>
+              <li>Conoce aspectos básicos de la civilización mesopotámica.</li>
             </ul>
           </div>
         </div>
@@ -177,8 +228,9 @@
           </button>
           <div class="area-contenido" hidden>
             <ul class="criterios-lista">
-              <li>2.2.b. Distinguir elementos característicos básicos de manifestaciones culturales y artísticas que forman parte del patrimonio, con especial atención a las propias de la cultura andaluza, indicando los canales, medios y técnicas utilizados, analizando sus diferencias y similitudes y reflexionando sobre las sensaciones producidas, con actitud de interés y respeto.</li>
-              
+              <li>Diseña un jardín colgante imaginario usando plantas y formas escalonadas.</li>
+              <li>Experimenta con el color verde en diferentes tonalidades para representar la vegetación.</li>
+              <li>Crea un mosaico inspirado en los motivos decorativos de la antigua Babilonia.</li>
             </ul>
           </div>
         </div>
@@ -202,52 +254,64 @@
         </div>
       </section>
 
-      <section class="panel" id="panel-competencias" role="tabpanel" aria-labelledby="tab-competencias" hidden>
+            <section class="panel" id="panel-competencias" role="tabpanel" aria-labelledby="tab-competencias" hidden>
         <h2 class="seccion-titulo">Competencias Específicas</h2>
         <p class="seccion-subtitulo">Competencias que se trabajan con esta maravilla</p>
-
-        <div class="competencia-item">
-          <div class="competencia-cabecera">
-            <span class="competencia-num">CE1</span>
-            <h3 class="competencia-titulo">Competencia específica 1 — [Editar nombre]</h3>
+        <div class="area-desplegable area-lengua">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📘 Lengua Castellana y Literatura</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Lengua: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
           </div>
-          <p class="competencia-desc">Descripción de la competencia. Indica qué capacidad desarrolla el alumnado al trabajar esta maravilla. Ejemplo: comprensión lectora, expresión escrita, pensamiento crítico...</p>
-          <ul class="competencia-indicadores">
-            <li>Indicador de logro 1 — [Editar]</li>
-            <li>Indicador de logro 2 — [Editar]</li>
-            <li>Indicador de logro 3 — [Editar]</li>
-          </ul>
         </div>
-
-        <div class="competencia-item">
-          <div class="competencia-cabecera">
-            <span class="competencia-num">CE2</span>
-            <h3 class="competencia-titulo">Competencia específica 2 — [Editar nombre]</h3>
+        <div class="area-desplegable area-mates">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📕 Matemáticas</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Matemáticas: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
           </div>
-          <p class="competencia-desc">Descripción de la segunda competencia. Puedes relacionarla con Ciencias Sociales, Ciencias Naturales, Educación Artística o Valores Cívicos según la maravilla.</p>
-          <ul class="competencia-indicadores">
-            <li>Indicador de logro 1 — [Editar]</li>
-            <li>Indicador de logro 2 — [Editar]</li>
-            <li>Indicador de logro 3 — [Editar]</li>
-          </ul>
         </div>
-
-        <div class="competencia-item">
-          <div class="competencia-cabecera">
-            <span class="competencia-num">CE3</span>
-            <h3 class="competencia-titulo">Competencia específica 3 — [Editar nombre]</h3>
+        <div class="area-desplegable area-medio">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📗 Conocimiento del Medio</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Conocimiento del Medio: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
           </div>
-          <p class="competencia-desc">Descripción de la tercera competencia. Añade o elimina bloques según las necesidades de cada unidad didáctica.</p>
-          <ul class="competencia-indicadores">
-            <li>Indicador de logro 1 — [Editar]</li>
-            <li>Indicador de logro 2 — [Editar]</li>
-            <li>Indicador de logro 3 — [Editar]</li>
-          </ul>
         </div>
-
+        <div class="area-desplegable area-plastica">
+          <button class="area-toggle" aria-expanded="false">
+            <span>📓 Educación Plástica</span>
+            <span class="area-flecha" aria-hidden="true">▼</span>
+          </button>
+          <div class="area-contenido" hidden>
+            <ul class="saberes-lista">
+              <li>CE1 — Educación Plástica: [Editar nombre de la competencia específica]</li>
+              <li>Indicador de logro 1 — [Editar]</li>
+              <li>Indicador de logro 2 — [Editar]</li>
+            </ul>
+          </div>
+        </div>
         <div class="curiosidad-caja" style="margin-top:1.5rem;">
           <span class="icono" aria-hidden="true">📝</span>
-          <p><strong>Nota para el profesorado:</strong> Edita este apartado sustituyendo los textos entre corchetes <code>[Editar]</code> con las competencias específicas del currículo que correspondan a cada unidad.</p>
+          <p><strong>Nota para el profesorado:</strong> Edita este apartado abriendo cada área y sustituyendo los textos entre corchetes <code>[Editar]</code> con las competencias específicas del currículo que correspondan.</p>
         </div>
       </section>
 
