@@ -3,113 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Exploradores de Palabras — Un viaje poético por las maravillas del mundo para 3º y 4º de Primaria.">
+  <meta name="description" content="Atlas de los Mundos del Aprendizaje — Exploradores de Palabras">
   <title>Exploradores de Palabras</title>
   <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    body { margin:0; overflow-x:hidden; }
+
+    .atlas-fondo {
+      background:#1a1008;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      padding:1rem 0 2rem;
+    }
+
+    .atlas-titulo {
+      font-family:'Cinzel Decorative', Georgia, serif;
+      color:#e8b84b;
+      font-size:clamp(.7rem,1.5vw,1.1rem);
+      text-align:center;
+      margin-bottom:.6rem;
+      letter-spacing:.15em;
+      text-shadow:0 2px 8px rgba(0,0,0,.8);
+      text-transform:uppercase;
+    }
+
+    .atlas-portada {
+      position:relative;
+      width:100%;
+      max-width:1200px;
+      margin:0 auto;
+      padding-top:66.667%;
+      box-shadow:0 8px 40px rgba(0,0,0,.5);
+    }
+
+    .atlas-video {
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      object-fit:fill;
+      display:block;
+    }
+
+    .atlas-zonas {
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+    }
+
+    .zona {
+      position:absolute;
+      transform:translate(-50%,-50%);
+      text-align:center;
+      cursor:default;
+      text-decoration:none;
+    }
+
+    .zona-activa { cursor:pointer; z-index:10; }
+    .zona-activa .zona-circulo { animation:pulsar 2s ease-in-out infinite; }
+    .zona-activa:hover .zona-circulo {
+      transform:scale(1.18);
+      box-shadow:0 0 30px rgba(200,149,42,.9),0 0 60px rgba(200,149,42,.4);
+    }
+    .zona-activa:hover .zona-etiqueta {
+      background:rgba(200,149,42,.95);
+      color:#3b2a14;
+    }
+
+    .zona-circulo {
+      width:clamp(44px,6vw,78px);
+      height:clamp(44px,6vw,78px);
+      border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-size:clamp(1.2rem,2.4vw,1.9rem);
+      margin:0 auto .35rem;
+      transition:transform .2s,box-shadow .2s;
+      box-shadow:0 2px 12px rgba(0,0,0,.4);
+    }
+
+    .zona-etiqueta {
+      font-family:'Cinzel Decorative',Georgia,serif;
+      font-size:clamp(.42rem,.95vw,.72rem);
+      font-weight:700;
+      padding:.22rem .55rem;
+      border-radius:4px;
+      white-space:nowrap;
+      transition:background .2s,color .2s;
+      letter-spacing:.02em;
+      line-height:1.3;
+      text-align:center;
+    }
+
+    .zona-inactiva { opacity:.5; filter:grayscale(.5); z-index:5; }
+    .zona-inactiva .zona-etiqueta { background:rgba(20,12,5,.7); color:#c8a96a; }
+
+    .pronto {
+      display:block;
+      font-family:'Nunito',sans-serif;
+      font-size:clamp(.32rem,.65vw,.56rem);
+      color:#e8b84b;
+      margin-top:.12rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .zona-activa .pronto { display:none; }
+
+    /* Colores por zona */
+    .zona-palabras   .zona-circulo { background:rgba(139,32,32,.9);  border:2px solid #e8c97a; }
+    .zona-palabras   .zona-etiqueta { background:rgba(139,32,32,.85); color:#fff; }
+    .zona-leyendas   .zona-circulo { background:rgba(80,40,120,.85); border:2px solid #c8a0e8; }
+    .zona-leyendas   .zona-etiqueta { background:rgba(60,20,100,.8); color:#e0c8ff; }
+    .zona-bosque     .zona-circulo { background:rgba(40,90,40,.85);  border:2px solid #80c860; }
+    .zona-bosque     .zona-etiqueta { background:rgba(20,60,20,.8);  color:#b0e890; }
+    .zona-archipielago .zona-circulo { background:rgba(20,80,140,.85); border:2px solid #60b0e8; }
+    .zona-archipielago .zona-etiqueta { background:rgba(10,50,100,.8); color:#a0d0ff; }
+    .zona-valle      .zona-circulo { background:rgba(160,80,10,.85); border:2px solid #e8a040; }
+    .zona-valle      .zona-etiqueta { background:rgba(120,60,0,.8);  color:#ffd080; }
+    .zona-galaxia    .zona-circulo { background:rgba(80,20,120,.85); border:2px solid #c060ff; }
+    .zona-galaxia    .zona-etiqueta { background:rgba(50,10,90,.8);  color:#e0a0ff; }
+    .zona-ciudad     .zona-circulo { background:rgba(20,100,100,.85);border:2px solid #40e0d0; }
+    .zona-ciudad     .zona-etiqueta { background:rgba(10,70,70,.8);  color:#80ffee; }
+
+    @keyframes pulsar {
+      0%,100% { box-shadow:0 0 15px rgba(200,149,42,.6),0 0 30px rgba(200,149,42,.2); }
+      50%      { box-shadow:0 0 28px rgba(200,149,42,.95),0 0 55px rgba(200,149,42,.45); }
+    }
+
+    #atlas-tooltip {
+      position:fixed;
+      background:#3b2a14;
+      color:#f5ead6;
+      font-family:'Nunito',sans-serif;
+      font-size:.82rem;
+      padding:.45rem .9rem;
+      border-radius:6px;
+      border:2px solid #c8952a;
+      pointer-events:none;
+      z-index:999;
+      display:none;
+      box-shadow:3px 3px 0 #c8952a;
+      max-width:240px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAVEGACIÓN -->
-  <nav aria-label="Navegación principal">
-    <a href="index.html" class="nav-logo" aria-label="Inicio — Exploradores de Palabras">
-      <span class="brujula" aria-hidden="true">🧭</span> Exploradores de Palabras
-    </a>
-    <ul role="list">
-      <li><a href="index.html" class="activa" aria-current="page">Inicio</a></li>
-      <li><a href="maravillas/antiguas.html">Maravillas Antiguas</a></li>
-      <li><a href="maravillas/modernas.html">Maravillas Modernas</a></li>
-      <li><a href="mapa-explorador.html">🗺️ El Mapa del Explorador</a></li>
-      <li><a href="poemas.html">Poemas</a></li>
-      <li><a href="actividades.html">Actividades</a></li>
-    </ul>
-  </nav>
+  <div class="atlas-fondo">
+    <p class="atlas-titulo">&#x1F9ED; Exploradores de Palabras</p>
 
-  <!-- HERO -->
-  <header class="hero" role="banner">
-    <span class="hero-icono" aria-hidden="true">🗺️</span>
-    <h1>Exploradores de <span>Palabras</span></h1>
-    <p class="subtitulo">Un viaje poético por las maravillas del mundo</p>
-    <a href="maravillas/antiguas.html" class="btn-principal">¡Comenzar la aventura! →</a>
-  </header>
+    <div class="atlas-portada" role="main" aria-label="Atlas de los Mundos del Aprendizaje">
 
-  <!-- SECCIÓN PRESENTACIÓN -->
-  <main>
-    <section class="seccion" aria-labelledby="titulo-bienvenida">
-      <h2 class="seccion-titulo" id="titulo-bienvenida">¡Bienvenido, explorador!</h2>
-      <p class="seccion-subtitulo">Prepara tu mapa, afila tu lápiz y abre bien los ojos…</p>
-      <p>En este rincón mágico descubrirás <strong>poemas, historias y juegos</strong> inspirados en los lugares más asombrosos de la Tierra. Desde las pirámides de Egipto hasta la Gran Muralla China, las palabras nos llevarán a cada rincón del planeta.</p>
-      <br>
-      <p>¿Estás listo para ser un <strong>explorador de palabras</strong>?</p>
+      <video class="atlas-video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="img/atlas-portada.mp4" type="video/mp4">
+      </video>
 
-      <!-- TARJETAS DE ACCESO RÁPIDO -->
-      <div class="intro-grid" role="list">
-        <a href="maravillas/antiguas.html" class="intro-card animar" role="listitem">
-          <span class="icono" aria-hidden="true">🏛️</span>
-          <h3>Maravillas Antiguas</h3>
-          <p>7 maravillas del mundo antiguo: pirámides, faros y jardines...</p>
+      <div class="atlas-zonas">
+
+        <!-- REINO DE LAS PALABRAS — clicable -->
+        <a href="mapa-explorador.html"
+           class="zona zona-activa zona-palabras"
+           style="left:79.985%;top:25.893%"
+           aria-label="Reino de las Palabras">
+          <div class="zona-circulo">&#x1F4D6;</div>
+          <div class="zona-etiqueta">Reino de las<br>Palabras</div>
         </a>
-        <a href="maravillas/modernas.html" class="intro-card animar" role="listitem">
-          <span class="icono" aria-hidden="true">🏔️</span>
-          <h3>Maravillas Modernas</h3>
-          <p>7 maravillas actuales: la Gran Muralla, el Taj Mahal, Petra...</p>
-        </a>
-        <a href="poemas.html" class="intro-card animar" role="listitem">
-          <span class="icono" aria-hidden="true">📜</span>
-          <h3>Poemas del viajero</h3>
-          <p>Versos que te llevarán por el mundo sin salir de tu silla.</p>
-        </a>
-        <a href="actividades.html" class="intro-card animar" role="listitem">
-          <span class="icono" aria-hidden="true">✏️</span>
-          <h3>Actividades</h3>
-          <p>Juegos de palabras, creación poética y más desafíos.</p>
-        </a>
+
+        <!-- REINO DE LAS LEYENDAS -->
+        <div class="zona zona-inactiva zona-leyendas" style="left:13.021%;top:32.217%">
+          <div class="zona-circulo">&#x1F3F0;</div>
+          <div class="zona-etiqueta">Reino de las<br>Leyendas<span class="pronto">Proximamente</span></div>
+        </div>
+
+        <!-- BOSQUE DE LOS PRIMEROS PASOS -->
+        <div class="zona zona-inactiva zona-bosque" style="left:6.448%;top:58.073%">
+          <div class="zona-circulo">&#x1F33F;</div>
+          <div class="zona-etiqueta">Bosque de los<br>Primeros Pasos<span class="pronto">Proximamente</span></div>
+        </div>
+
+        <!-- ARCHIPIELAGO DE LOS DESCUBRIMIENTOS -->
+        <div class="zona zona-inactiva zona-archipielago" style="left:27.282%;top:74.070%">
+          <div class="zona-circulo">&#x26F5;</div>
+          <div class="zona-etiqueta">Archipielago<br>Descubrimientos<span class="pronto">Proximamente</span></div>
+        </div>
+
+        <!-- VALLE DE LOS INVENTORES -->
+        <div class="zona zona-inactiva zona-valle" style="left:87.841%;top:57.672%">
+          <div class="zona-circulo">&#x2699;&#xFE0F;</div>
+          <div class="zona-etiqueta">Valle de los<br>Inventores<span class="pronto">Proximamente</span></div>
+        </div>
+
+        <!-- GALAXIA DEL FUTURO -->
+        <div class="zona zona-inactiva zona-galaxia" style="left:73.686%;top:74.735%">
+          <div class="zona-circulo">&#x1F680;</div>
+          <div class="zona-etiqueta">Galaxia del<br>Futuro<span class="pronto">Proximamente</span></div>
+        </div>
+
+        <!-- CIUDAD DE LOS EXPLORADORES -->
+        <div class="zona zona-inactiva zona-ciudad" style="left:50.051%;top:46.866%">
+          <div class="zona-circulo">&#x1F9ED;</div>
+          <div class="zona-etiqueta">Ciudad de los<br>Exploradores<span class="pronto">Proximamente</span></div>
+        </div>
+
       </div>
-    </section>
-
-    <!-- BRÚJULA DECORATIVA -->
-    <div class="brujula-deco" aria-hidden="true">🧭</div>
-
-    <!-- CITA INSPIRADORA -->
-    <div class="banner-seccion" role="complementary">
-      <h2>"Las palabras son la forma más poderosa de viajar"</h2>
-      <p>— Explorador desconocido</p>
     </div>
+  </div>
 
-    <!-- CÓMO USAR LA WEB -->
-    <section class="seccion" aria-labelledby="titulo-como">
-      <h2 class="seccion-titulo" id="titulo-como">¿Cómo explorar?</h2>
-      <p class="seccion-subtitulo">Tu guía de aventurero en tres pasos</p>
+  <div id="atlas-tooltip" role="tooltip"></div>
 
-      <div class="intro-grid" role="list">
-        <div class="intro-card" role="listitem">
-          <span class="icono" aria-hidden="true">1️⃣</span>
-          <h3>Elige una maravilla</h3>
-          <p>Visita las secciones de maravillas antiguas o modernas y elige la que más te llame.</p>
-        </div>
-        <div class="intro-card" role="listitem">
-          <span class="icono" aria-hidden="true">2️⃣</span>
-          <h3>Lee el poema</h3>
-          <p>Cada maravilla tiene su propio poema. ¡Léelo en voz alta para sentirlo mejor!</p>
-        </div>
-        <div class="intro-card" role="listitem">
-          <span class="icono" aria-hidden="true">3️⃣</span>
-          <h3>Haz la actividad</h3>
-          <p>Completa el reto de palabras de cada maravilla y demuestra que eres un verdadero explorador.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <script>
+    var tooltip = document.getElementById('atlas-tooltip');
 
-  <!-- PIE DE PÁGINA -->
-  <footer role="contentinfo">
-    <p class="footer-logo">🧭 Exploradores de Palabras</p>
-    <p>La Clase de David · <a href="https://laclasededavid.github.io" target="_blank" rel="noopener">laclasededavid.github.io</a></p>
-    <p style="margin-top:0.4rem; opacity:0.6;">Hecho con ❤️ para 3º y 4º de Primaria</p>
-  </footer>
+    var zonaActiva = document.querySelector('.zona-activa');
+    zonaActiva.addEventListener('mouseenter', function() {
+      tooltip.textContent = 'Entrar al Reino de las Palabras';
+      tooltip.style.display = 'block';
+    });
+    zonaActiva.addEventListener('mousemove', function(e) {
+      tooltip.style.left = (e.clientX + 14) + 'px';
+      tooltip.style.top  = (e.clientY - 40) + 'px';
+    });
+    zonaActiva.addEventListener('mouseleave', function() {
+      tooltip.style.display = 'none';
+    });
 
-  <!-- ACCESIBILIDAD -->
-  <script src="js/contenido.js"></script>
-  <script src="js/accesibilidad.js"></script>
+    document.querySelectorAll('.zona-inactiva').forEach(function(zona) {
+      zona.addEventListener('mouseenter', function(e) {
+        var nombre = zona.querySelector('.zona-etiqueta').firstChild.textContent.trim();
+        tooltip.textContent = nombre + ' -- Proximamente';
+        tooltip.style.display = 'block';
+      });
+      zona.addEventListener('mousemove', function(e) {
+        tooltip.style.left = (e.clientX + 14) + 'px';
+        tooltip.style.top  = (e.clientY - 40) + 'px';
+      });
+      zona.addEventListener('mouseleave', function() {
+        tooltip.style.display = 'none';
+      });
+    });
+</script>
 
 </body>
 </html>
