@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pergaminos — Exploradores de Palabras">
+  <title>Pergaminos · Exploradores de Palabras</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    /* ── Fuente manuscrita para títulos del pergamino ── */
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=MedievalSharp&display=swap');
+
+    /* ── Variables de color pergamino ── */
+    :root {
+      --perg-fondo:    #f5e9c8;
+      --perg-oscuro:   #e8d5a0;
+      --perg-tinta:    #3b1f0a;
+      --perg-tinta2:   #5c3010;
+      --perg-rojo:     #8b1a1a;
+      --perg-dorado:   #b8860b;
+      --perg-sello:    #6b0f0f;
+    }
+
+    /* ── Layout general ── */
+    body { background: #1a0f05; }
+
+    .perg-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* ── Navegación entre pergaminos ── */
+    .perg-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .perg-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--perg-rojo);
+      color: var(--perg-fondo);
+      font-family: var(--fuente-ui);
+      font-size: .85rem;
+      font-weight: 700;
+      padding: .55rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      border: 2px solid var(--perg-tinta);
+      cursor: pointer;
+      transition: background .2s, opacity .2s;
+      letter-spacing: .03em;
+    }
+    .perg-nav-btn:hover { background: var(--perg-dorado); color: var(--perg-tinta); }
+    .perg-nav-btn:disabled,
+    .perg-nav-btn[disabled] { opacity: .35; cursor: not-allowed; pointer-events: none; }
+
+    .perg-contador {
+      font-family: var(--fuente-titulo);
+      font-size: .95rem;
+      color: var(--perg-fondo);
+      text-align: center;
+      opacity: .85;
+      letter-spacing: .08em;
+    }
+
+    /* ── Imagen del pergamino ── */
+    .perg-imagen-wrap {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 3px solid var(--perg-tinta);
+      box-shadow: 0 8px 32px rgba(0,0,0,.6);
+      margin-bottom: 2.5rem;
+      background: var(--perg-oscuro);
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .perg-imagen {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Placeholder cuando no hay imagen */
+    .perg-placeholder {
+      padding: 3rem 2rem;
+      text-align: center;
+      color: var(--perg-tinta2);
+      font-family: var(--fuente-titulo);
+    }
+    .perg-placeholder .icono { font-size: 4rem; display: block; margin-bottom: 1rem; opacity: .4; }
+    .perg-placeholder p { font-size: .9rem; opacity: .6; }
+
+    /* ── Contenido textual ── */
+    .perg-contenido {
+      background: var(--perg-fondo);
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+      border: 2px solid var(--perg-tinta);
+      border-radius: 8px;
+      padding: 2.5rem 3rem;
+      box-shadow: 0 6px 24px rgba(0,0,0,.5);
+      position: relative;
+    }
+
+    /* Esquinas decorativas */
+    .perg-contenido::before,
+    .perg-contenido::after {
+      content: '✦';
+      position: absolute;
+      color: var(--perg-dorado);
+      font-size: 1.2rem;
+      opacity: .5;
+    }
+    .perg-contenido::before { top: .8rem; left: 1rem; }
+    .perg-contenido::after  { bottom: .8rem; right: 1rem; }
+
+    /* Cabecera del contenido */
+    .perg-cabecera {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px solid var(--perg-dorado);
+    }
+
+    .perg-sociedad {
+      font-family: var(--fuente-ui);
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      color: var(--perg-tinta2);
+      margin-bottom: .5rem;
+    }
+
+    .perg-numero {
+      font-family: var(--fuente-titulo);
+      font-size: 1rem;
+      color: var(--perg-rojo);
+      letter-spacing: .1em;
+      margin-bottom: .3rem;
+    }
+
+    .perg-nombre {
+      font-family: var(--fuente-titulo);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: var(--perg-tinta);
+      line-height: 1.2;
+      margin-bottom: .6rem;
+    }
+
+    .perg-palabra-label {
+      font-family: var(--fuente-ui);
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--perg-tinta2);
+      margin-bottom: .2rem;
+    }
+
+    .perg-palabra {
+      font-family: var(--fuente-titulo);
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      color: var(--perg-rojo);
+      letter-spacing: .05em;
+    }
+
+    /* Divisor decorativo */
+    .perg-divisor {
+      text-align: center;
+      color: var(--perg-dorado);
+      font-size: 1rem;
+      letter-spacing: .4rem;
+      margin: 1.5rem 0;
+      opacity: .7;
+    }
+
+    /* Título de sección */
+    .perg-seccion-titulo {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: var(--fuente-titulo);
+      font-size: 1rem;
+      color: var(--perg-rojo);
+      margin-bottom: .8rem;
+      letter-spacing: .05em;
+    }
+    .perg-seccion-titulo::before { content: '✦'; color: var(--perg-dorado); font-size: .8rem; }
+
+    /* Texto del pergamino */
+    .perg-texto p {
+      font-family: var(--fuente-texto);
+      font-size: .97rem;
+      color: var(--perg-tinta);
+      line-height: 1.85;
+      margin-bottom: .7rem;
+      text-align: justify;
+    }
+
+    /* Secciones con fondo */
+    .perg-bloque {
+      background: rgba(184,134,11,.08);
+      border-left: 3px solid var(--perg-dorado);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .perg-bloque p {
+      font-family: var(--fuente-texto);
+      font-size: .93rem;
+      color: var(--perg-tinta);
+      line-height: 1.8;
+      font-style: italic;
+      text-align: justify;
+    }
+
+    /* Pregunta del custodio */
+    .perg-pregunta {
+      background: rgba(139,26,26,.07);
+      border-left: 3px solid var(--perg-rojo);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .perg-pregunta p {
+      font-family: var(--fuente-texto);
+      font-size: 1rem;
+      color: var(--perg-rojo);
+      line-height: 1.75;
+      font-weight: 600;
+    }
+
+    /* Huella del explorador */
+    .perg-huella {
+      background: rgba(59,31,10,.06);
+      border: 1px dashed var(--perg-tinta2);
+      border-radius: 6px;
+      padding: 1rem 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .perg-huella p {
+      font-family: var(--fuente-texto);
+      font-size: .93rem;
+      color: var(--perg-tinta2);
+      line-height: 1.8;
+    }
+
+    /* Frase destacada final */
+    .perg-frase {
+      background: var(--perg-rojo);
+      color: var(--perg-fondo);
+      border-radius: 6px;
+      padding: 1.1rem 1.5rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .perg-frase p {
+      font-family: var(--fuente-titulo);
+      font-size: clamp(.8rem, 1.8vw, 1rem);
+      line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    /* Pie del pergamino */
+    .perg-pie {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--perg-dorado);
+      font-family: var(--fuente-ui);
+      font-size: .7rem;
+      color: var(--perg-tinta2);
+      letter-spacing: .08em;
+      opacity: .7;
+    }
+
+    @media (max-width: 600px) {
+      .perg-contenido { padding: 1.5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <nav aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo"><span class="brujula" aria-hidden="true">🧭</span> Exploradores de Palabras</a>
+    <ul role="list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="mapa-explorador.html">🗺️ El Mapa del Explorador</a></li>
+      <li><a href="maravillas/antiguas.html">Maravillas Antiguas</a></li>
+      <li><a href="maravillas/modernas.html">Maravillas Modernas</a></li>
+      <li><a href="pergaminos.html" class="activa" aria-current="page">📜 Pergaminos</a></li>
+      <li><a href="poemas.html">Poemas</a></li>
+      <li><a href="actividades.html">Actividades</a></li>
+    </ul>
+  </nav>
+
+  <!-- MIGAS DE PAN -->
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <a href="index.html">Inicio</a> <span aria-hidden="true">›</span>
+    <strong>📜 Pergaminos</strong>
+  </nav>
+
+  <main>
+    <div class="perg-wrap">
+
+      <!-- NAVEGACIÓN ENTRE PERGAMINOS -->
+      <nav class="perg-nav" aria-label="Navegar entre pergaminos">
+        <button class="perg-nav-btn" id="btn-anterior" onclick="cambiarPergamino(-1)" disabled>
+          ← Anterior
+        </button>
+        <p class="perg-contador" id="perg-contador">Pergamino 1 de 12</p>
+        <button class="perg-nav-btn" id="btn-siguiente" onclick="cambiarPergamino(1)">
+          Siguiente →
+        </button>
+      </nav>
+
+      <!-- IMAGEN DEL PERGAMINO -->
+      <div class="perg-imagen-wrap" id="perg-imagen-wrap">
+        <!-- generado por JS -->
+      </div>
+
+      <!-- CONTENIDO TEXTUAL -->
+      <article class="perg-contenido" id="perg-contenido" aria-live="polite">
+        <!-- generado por JS -->
+      </article>
+
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <p class="footer-logo">🧭 Exploradores de Palabras</p>
+    <p>La Clase de David · <a href="https://laclasededavid.github.io" target="_blank" rel="noopener">laclasededavid.github.io</a></p>
+    <p style="margin-top:.4rem;opacity:.6;">Hecho con ❤️ para 3º y 4º de Primaria</p>
+  </footer>
+
+  <script src="js/pergaminos-contenido.js"></script>
+  <script src="js/accesibilidad.js"></script>
+  <script>
+    var indiceActual = 0;
+
+    function renderPergamino(idx) {
+      var p = PERGAMINOS[idx];
+      var total = PERGAMINOS.length;
+
+      // Contador
+      document.getElementById('perg-contador').textContent =
+        p.numero + ' — ' + (idx + 1) + ' de ' + total;
+
+      // Botones
+      document.getElementById('btn-anterior').disabled = idx === 0;
+      document.getElementById('btn-siguiente').disabled = idx === total - 1;
+
+      // Imagen
+      var imgWrap = document.getElementById('perg-imagen-wrap');
+      if (p.imagen) {
+        imgWrap.innerHTML =
+          '<img src="' + p.imagen + '" alt="Pergamino de ' + p.nombre +
+          '" class="perg-imagen" loading="lazy">';
+      } else {
+        imgWrap.innerHTML =
+          '<div class="perg-placeholder">' +
+          '<span class="icono">📜</span>' +
+          '<p>Imagen del pergamino próximamente</p>' +
+          '</div>';
+      }
+
+      // Contenido
+      var parrafos = p.pergamino.map(function(t) {
+        return '<p>' + t + '</p>';
+      }).join('');
+
+      document.getElementById('perg-contenido').innerHTML =
+        '<div class="perg-cabecera">' +
+          '<p class="perg-sociedad">Sociedad Internacional de Exploradores de Palabras</p>' +
+          '<p class="perg-numero">— ' + p.numero + ' —</p>' +
+          '<h1 class="perg-nombre">' + p.nombre + '</h1>' +
+          '<p class="perg-palabra-label">Palabra Fundamental</p>' +
+          '<p class="perg-palabra">✦ ' + p.palabraFundamental + ' ✦</p>' +
+        '</div>' +
+
+        '<div class="perg-divisor">✦ ✦ ✦</div>' +
+
+        '<h2 class="perg-seccion-titulo">El Pergamino</h2>' +
+        '<div class="perg-texto">' + parrafos + '</div>' +
+
+        '<div class="perg-divisor">· · ·</div>' +
+
+        '<h2 class="perg-seccion-titulo">Anotación del Custodio</h2>' +
+        '<div class="perg-bloque"><p>' + p.anotacionCustodio + '</p></div>' +
+
+        '<h2 class="perg-seccion-titulo">La Pregunta del Custodio</h2>' +
+        '<div class="perg-pregunta"><p>' + p.preguntaCustodio + '</p></div>' +
+
+        '<h2 class="perg-seccion-titulo">La Huella del Explorador</h2>' +
+        '<div class="perg-huella"><p>' + p.huellaExplorador + '</p></div>' +
+
+        '<div class="perg-frase"><p>' + p.fraseDestacada + '</p></div>' +
+
+        '<div class="perg-pie">' +
+          '<span>Sociedad Internacional de Exploradores de Palabras</span>' +
+          '<span>Código de los Doce Pergaminos</span>' +
+          '<span>' + p.numero + '</span>' +
+        '</div>';
+
+      // Scroll arriba al cambiar
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function cambiarPergamino(direccion) {
+      var nuevo = indiceActual + direccion;
+      if (nuevo >= 0 && nuevo < PERGAMINOS.length) {
+        indiceActual = nuevo;
+        renderPergamino(indiceActual);
+      }
+    }
+
+    // Navegación con teclado
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft')  cambiarPergamino(-1);
+      if (e.key === 'ArrowRight') cambiarPergamino(1);
+    });
+
+    // Iniciar con el primer pergamino
+    renderPergamino(0);
+  </script>
+</body>
+</html>
