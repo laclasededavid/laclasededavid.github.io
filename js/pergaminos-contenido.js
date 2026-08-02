@@ -64,19 +64,24 @@ const PERGAMINOS = [
     id: "machu-picchu",
     numero: "Pergamino III",
     nombre: "Machu Picchu",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    palabraFundamental: "Escucha",
+    imagen: "img/pergaminos/machu-picchu.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "Me construyeron entre montañas para mirar más lejos. Pero mi mayor enseñanza no está en las piedras, sino en el silencio que me rodea.",
+      "Muchos llegaron buscando respuestas, y se marcharon porque esperaban que yo hablara primero. Pero yo no hablo sin un corazón dispuesto a escuchar.",
+      "Escucha al viento cuando recorre los caminos antiguos. Escucha a la tierra que guarda memorias profundas. Escucha a las personas que todavía viven en armonía con la naturaleza. Escucha tus propias preguntas cuando te invitan a comprender.",
+      "No hay sabiduría sin escucha. No hay aprendizaje sin humildad. No hay comunidad sin atención al otro.",
+      "Quien escucha con el corazón abierto, descubre que todo —y todos— tienen algo que enseñar."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He visto exploradores llegar con prisa, con mapas, con cámaras y con listas infinitas. Pero muy pocos se sientan. Muy pocos guardan silencio. He descubierto que quienes se detienen a escuchar lo invisible, comprenden mucho más que quienes solo observan lo evidente. Machu Picchu me enseñó que la verdadera inteligencia no está en hablar más, sino en escuchar mejor. Escuchar a la naturaleza, a los demás, a uno mismo y al mundo que nos rodea es el camino más seguro hacia la sabiduría.",
+
+    preguntaCustodio: "¿Cuándo fue la última vez que escuchaste con tanta atención que entendiste algo que antes no habías comprendido?",
+
+    huellaExplorador: "Hoy dedica tiempo a escuchar de verdad. Escucha a alguien sin interrumpir. Escucha tu entorno sin colocar auriculares. Escucha tu corazón sin prisa. Anota lo que descubras.",
+
+    fraseDestacada: "En el silencio que escuchas con el corazón, se esconden las respuestas que estás buscando."
   },
 
   // ── 4 ──────────────────────────────────────────────────────
