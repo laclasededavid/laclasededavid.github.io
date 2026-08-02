@@ -88,20 +88,25 @@ const PERGAMINOS = [
   {
     id: "gran-barrera-coral",
     numero: "Pergamino IV",
-    nombre: "Gran Barrera de Coral",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    nombre: "La Gran Barrera de Coral",
+    palabraFundamental: "Cooperación",
+    imagen: "img/pergaminos/gran-barrera-coral.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "Juntos somos arrecife. Miles de seres diminutos construyen conmigo un hogar inmenso. No lo hice yo. No lo harás tú en soledad. Lo construimos todos, poco a poco, generación tras generación. En mis aguas la cooperación es vida.",
+      "El pez pequeño confía en el pez grande. El coral comparte su espacio. El mar sostiene cada movimiento. No hay uno más importante que otro.",
+      "Cuando todos colaboramos, el océano canta. Pero cuando alguien solo piensa en sí mismo, el equilibrio se rompe y el color desaparece.",
+      "Si quieres un futuro lleno de vida, aprende a trabajar con otros, no contra otros. Recuerda: ninguna ola llega sola a la orilla. Ningún arrecife nace de un único coral.",
+      "La fuerza más poderosa del planeta es la que crea unión."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He visto exploradores maravillarse ante la belleza del arrecife, pero pocos comprenden su verdadera enseñanza. Cada coral es pequeño, frágil y aparentemente insignificante. Sin embargo, cuando se une con otros, crea una estructura que puede verse desde el espacio. Así es la cooperación: invisible al principio, imparable después. He aprendido que los equipos que se escuchan, que comparten tareas y que celebran los logros de todos, son los que dejan huella en el mundo. La Gran Barrera me enseñó que la unión no resta; multiplica.",
+
+    preguntaCustodio: "¿En qué momentos has descubierto que juntos llegáis más lejos de lo que podríais lograr por separado?",
+
+    huellaExplorador: "Hoy busca a alguien con quien casi nunca trabajas. Propón una pequeña misión en la que cada uno aporte lo que mejor sabe hacer. Escucha, comparte, combina ideas y crea algo nuevo juntos. Deja una huella de cooperación allí donde estés.",
+
+    fraseDestacada: "Cuando cooperamos, construimos arrecifes de posibilidades donde la vida florece para todas las generaciones."
   },
 
   // ── 5 ──────────────────────────────────────────────────────
