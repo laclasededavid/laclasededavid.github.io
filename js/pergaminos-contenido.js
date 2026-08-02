@@ -43,15 +43,20 @@ const PERGAMINOS = [
     imagen: "img/pergaminos/cuerpo-humano.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "Tú eres tu primera maravilla. No existe en el mundo otra obra tan compleja, tan perfecta ni tan misteriosa como el cuerpo humano.",
+      "Cada célula trabaja sin descanso. Cada latido sucede con una precisión asombrosa. Cada respiración te conecta con la vida que te rodea.",
+      "Eres fuerza y eres delicadeza. Eres movimiento y eres equilibrio. Eres mente que imagina, corazón que siente y manos que transforman.",
+      "Cuida tu cuerpo, porque es tu casa. Conócelo, porque es tu guía. Agradécelo, porque camina contigo desde que naciste.",
+      "Y jamás olvides que el mayor viaje que realizarás en tu vida será aprender a comprenderte a ti mismo."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He visto exploradores recorrer desiertos, escalar montañas y cruzar océanos. Pero los que verdaderamente crecen son aquellos que se atreven a conocerse a sí mismos. El cuerpo humano es un universo completo: más de treinta billones de células, millones de mensajes cada segundo y un sistema perfecto que trabaja unido. Cuando comprendemos cómo funciona nuestro cuerpo, aprendemos también a cuidarlo, a escucharlo y a respetarlo. La comprensión de uno mismo no es egoísmo. Es el primer paso para comprender a los demás y para caminar con más sabiduría por el mundo.",
+
+    preguntaCustodio: "¿Qué parte de ti mismo te gustaría conocer mejor para poder cuidarla y hacerla aún más fuerte?",
+
+    huellaExplorador: "Hoy dedica unos minutos a observar tu cuerpo con atención. Escucha tu respiración. Siente tu corazón. Agradece todo lo que hace por ti cada día. Después, realiza una acción que contribuya a cuidarlo: descansa mejor, muévete más, aliméntate con conciencia o regala una sonrisa a alguien.",
+
+    fraseDestacada: "Toda gran expedición comienza en el lugar donde aprendemos a comprender quiénes somos."
   },
 
   // ── 3 ──────────────────────────────────────────────────────
