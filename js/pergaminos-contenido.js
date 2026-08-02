@@ -39,8 +39,8 @@ const PERGAMINOS = [
     id: "cuerpo-humano",
     numero: "Pergamino II",
     nombre: "El Cuerpo Humano",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    palabraFundamental: "Comprensión",
+    imagen: "img/pergaminos/cuerpo-humano.png",
 
     pergamino: [
       "[Editar texto del pergamino — párrafo 1]",
