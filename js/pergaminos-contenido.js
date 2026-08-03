@@ -113,20 +113,24 @@ const PERGAMINOS = [
   {
     id: "jardines-babilonia",
     numero: "Pergamino V",
-    nombre: "Jardines de Babilonia",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    nombre: "Los Jardines Colgantes de Babilonia",
+    palabraFundamental: "Sueño",
+    imagen: "img/pergaminos/jardines-babilonia.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "Sueñan los jardines antes de nacer. Sueñan las semillas bajo la tierra oscura. Sueñan las raíces cuando aún son un susurro. Sueñan las hojas con el cielo que aún no han tocado. Todo sueño es un puente invisible que une lo que somos con lo que podemos llegar a ser.",
+      "Yo fui construido para mostrar que la imaginación puede convertir incluso un desierto en un lugar fértil. No solo con agua y piedra, sino con la decisión de creer en la belleza que todavía no existe.",
+      "Cada jardín comenzó en la mente de alguien que se atrevió a imaginar lo que otros decían imposible.",
+      "Sueña, pequeño explorador. Porque los sueños no pertenecen a quienes se duermen, sino a quienes se atreven a despertar mundos nuevos."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He visto exploradores con ideas que parecían locuras imposibles. He visto cómo comenzaron siendo apenas un dibujo en una libreta. He visto equipos que nadie creía que podrían lograr nada juntos. Y he visto cómo el sueño, cuando se cuida y se comparte, se convierte en el primer escalón de algo extraordinario. Los Jardines Colgantes me enseñan que todo gran aprendizaje empieza cuando nos permitimos imaginar sin límites. Soñar no es escapar de la realidad: es darle forma al futuro.",
+
+    preguntaCustodio: "¿Qué sueño te gustaría cultivar para que, algún día, pueda convertirse en algo que todavía hoy parece imposible?",
+
+    huellaExplorador: "Dibuja o escribe tu jardín de sueños. Añade todo lo que te gustaría que creciera en él. Compártelo con tu equipo y elegid una pequeña acción para regar juntos ese sueño cada día. Así, poco a poco, florecerá.",
+
+    fraseDestacada: "Todo jardín comienza con un sueño y florece con cuidado, paciencia y esperanza."
   },
 
   // ── 6 ──────────────────────────────────────────────────────
