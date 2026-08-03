@@ -208,19 +208,23 @@ const PERGAMINOS = [
     id: "taj-mahal",
     numero: "Pergamino IX",
     nombre: "Taj Mahal",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    palabraFundamental: "Armonía",
+    imagen: "img/pergaminos/taj-mahal.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "Entre el cielo y el río Yamuna, se alza un sueño de mármol y luna. No es un palacio, ni una fortaleza: es un poema de amor en la piedra.",
+      "El Taj Mahal fue construido como homenaje eterno a una reina, pero guarda un secreto más profundo: la búsqueda de la armonía perfecta.",
+      "Cada arco, cada cúpula, cada jardín, cada reflejo en el agua, cuenta la historia de un equilibrio entre belleza, simetría y emoción.",
+      "La armonía no es solo lo que se ve, es lo que se siente cuando todo encaja."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He contemplado maravillas de guerra y poder, pero pocas me han hablado al corazón como este lugar. El Taj Mahal me enseña que la verdadera grandeza no domina, no impone, no destruye. La armonía construye puentes entre almas, entre culturas, entre tiempos. Cuando nuestro interior está en equilibrio, todo a nuestro alrededor también lo está.",
+
+    preguntaCustodio: "¿Qué pasaría si en tu día a día buscaras armonía en lugar de tener siempre la razón?",
+
+    huellaExplorador: "Crea algo que represente la armonía para ti: puede ser un dibujo, una composición musical, una fotografía, un poema o un espacio ordenado. Comparte tu creación y explica qué significa.",
+
+    fraseDestacada: "La armonía transforma lo ordinario en extraordinario."
   },
 
   // ── 10 ─────────────────────────────────────────────────────
