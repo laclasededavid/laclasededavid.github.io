@@ -161,19 +161,22 @@ const PERGAMINOS = [
     id: "amazonia",
     numero: "Pergamino VII",
     nombre: "La Amazonia",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    palabraFundamental: "Vida",
+    imagen: "img/pergaminos/amazonia.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "La selva respira en verde infinito. Árboles gigantes tocan el cielo, mientras ríos de agua dulce cantan secretos antiguos. En cada hoja, en cada gota, en cada ser, se esconde un misterio que nos habla de nosotros mismos.",
+      "La Amazonia no solo da vida: la protege, la sostiene, la renueva. Desde las raíces hasta las nubes, todo está conectado en un equilibrio perfecto.",
+      "Si la cuidamos, nos cuida. Si la comprendemos, nos enseña. Si la respetamos, podremos seguir viviendo en este planeta que compartimos."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He navegado ríos caudalosos y cruzado selvas impenetrables. He visto tribus que viven en armonía con la naturaleza y conocí plantas que curan lo que la ciencia aún no entiende. La Amazonia es un libro abierto para quien sabe observar. Allí aprendí que la vida no pertenece a nadie, sino que todos pertenecemos a la vida. Quien daña la selva, se daña a sí mismo. Quien la honra, encuentra su lugar en el mundo.",
+
+    preguntaCustodio: "¿Qué puedes hacer tú hoy para cuidar lo que da vida a tantos seres, incluso a los que no ves?",
+
+    huellaExplorador: "Observa tu entorno con nuevos ojos. Investiga sobre una especie, un árbol o un río. Comparte lo que aprendas y crea conciencia. Pequeñas acciones, hechas con amor, dejan huellas que protegen la vida.",
+
+    fraseDestacada: "Cada ser vivo tiene un propósito. Cada pequeña acción cuenta. La vida es la mayor maravilla que debemos custodiar."
   },
 
   // ── 8 ──────────────────────────────────────────────────────
@@ -181,19 +184,23 @@ const PERGAMINOS = [
     id: "petra",
     numero: "Pergamino VIII",
     nombre: "Petra",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    palabraFundamental: "Ingenio",
+    imagen: "img/pergaminos/petra.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "En el corazón del desierto, donde el viento esculpe historias, los nabateos tallaron sueños en la roca dorada. Sin ruedas, sin cemento, sin prisa. Solo manos sabias, agua y tiempo.",
+      "Crearon canales donde no los había, convirtieron la piedra en ciudad, y el silencio en protección.",
+      "Petra es más que un lugar: es prueba de que la mente humana puede transformar lo imposible en hogar.",
+      "El ingenio no siempre hace ruido, a veces, solo deja huella."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He visto civilizaciones que dominan con fuerza, y otras que perduran con inteligencia. Los nabateos entendieron el valor de cada gota de agua, del comercio justo y del conocimiento del entorno. Petra me recuerda que el verdadero poder no siempre se ve, pero siempre transforma. El ingenio es una forma de respeto hacia la vida y hacia el lugar que habitamos.",
+
+    preguntaCustodio: "¿Qué problema de tu entorno podrías resolver usando tu ingenio en lugar de pedir ayuda?",
+
+    huellaExplorador: "Observa un lugar que necesite mejora. Piensa en soluciones creativas y sostenibles. Dibuja tu idea, escríbela y compártela. Pequeños cambios, grandes huellas. Tu ingenio puede construir un mundo mejor.",
+
+    fraseDestacada: "El ingenio ve lo que otros no ven y hace posible lo que parece imposible."
   },
 
   // ── 9 ──────────────────────────────────────────────────────
