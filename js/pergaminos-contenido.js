@@ -232,19 +232,23 @@ const PERGAMINOS = [
     id: "stonehenge",
     numero: "Pergamino X",
     nombre: "Stonehenge",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    palabraFundamental: "Misterio",
+    imagen: "img/pergaminos/stonehenge.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "En la llanura de Salisbury, donde el viento dibuja historias, se alzan piedras que el tiempo no ha podido explicar. Nadie sabe con certeza quién las puso allí, ni cómo, ni para qué.",
+      "Stonehenge es un círculo de enigmas, un calendorio tallado en la piedra, un observatorio de estrellas, un lugar sagrado, un susurro del pasado.",
+      "Cada amanecer que atraviesa sus arcos nos recuerda que hubo seres humanos que miraron al cielo y quisieron comprenderlo.",
+      "El misterio no siempre tiene respuesta, pero siempre tiene algo que enseñarnos: a maravillarnos."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He visto civilizaciones levantar murallas para separarse, y otras, como esta, para conectarse con lo eterno. Stonehenge no busca imponer, busca entender. Nos enseña que la curiosidad fue nuestro primer templo y que el cielo ha sido, desde siempre, nuestro mejor libro. Que nunca se apague la llama de las preguntas que nos hacen mirar más allá de lo evidente.",
+
+    preguntaCustodio: "¿Qué crees que buscaban comprender quienes levantaron este círculo de piedra?",
+
+    huellaExplorador: "Investiga sobre los movimientos del Sol y la Luna y cómo se relacionan con Stonehenge. Crea tu propio modelo de observatorio con piedras, cartón o materiales naturales. Escribe una carta desde el pasado imaginando que eres parte de su construcción.",
+
+    fraseDestacada: "El misterio abre puertas que solo la curiosidad se atreve a cruzar."
   },
 
   // ── 11 ─────────────────────────────────────────────────────
