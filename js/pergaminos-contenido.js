@@ -137,20 +137,23 @@ const PERGAMINOS = [
   {
     id: "gran-canon",
     numero: "Pergamino VI",
-    nombre: "Gran Cañón",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    nombre: "El Gran Cañón",
+    palabraFundamental: "Perspectiva",
+    imagen: "img/pergaminos/gran-canon.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "Abrí mis ojos ante un abismo de colores. Capas de piedra contaban historias antiguas, escritas con paciencia durante millones de años. El río seguía su camino, tranquilo y constante, tallando la tierra gota a gota, sin prisa.",
+      "Comprendí que todo depende del lugar desde donde decides mirar. Lo que desde cerca parece un obstáculo, desde lejos revela un paisaje. Lo que hoy te parece imposible, mañana puede ser solo el principio de tu ruta. La perspectiva transforma los límites en horizontes.",
+      "Viaja, observa, cambia tu mirada. Allí donde ahora ves un final, quizá exista un comienzo que aún no has descubierto."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He visto exploradores quedarse atrapados en detalles pequeños. Se frustran, se cansan, dudan de sí mismos. Entonces les hablo del Gran Cañón y del poder de cambiar la mirada. Cuando te elevas, comprendes. Cuando comprendes, decides mejor. La perspectiva no ignora lo que duele, pero lo sitúa en su lugar. Desde allí, los problemas se vuelven caminos y las dificultades, aprendizajes. La vida es más amplia que cualquier roca que hoy te detenga.",
+
+    preguntaCustodio: "¿Qué cambiaría en tu vida si te permitieras mirar desde más lejos, con calma y con confianza?",
+
+    huellaExplorador: "Elige hoy una situación que te preocupe. Dale un paso atrás: respira, observa, escribe. Busca algo positivo que puedas aprender de ella. Luego, da un pequeño paso hacia adelante con una nueva decisión. Tu mirada puede ser el primer cambio.",
+
+    fraseDestacada: "Cuando cambias tu perspectiva, el mundo no cambia, pero tú sí."
   },
 
   // ── 7 ──────────────────────────────────────────────────────
