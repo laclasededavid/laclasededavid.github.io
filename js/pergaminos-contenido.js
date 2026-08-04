@@ -256,19 +256,22 @@ const PERGAMINOS = [
     id: "piramides-giza",
     numero: "Pergamino XI",
     nombre: "Pirámides de Giza",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    palabraFundamental: "Sabiduría",
+    imagen: "img/pergaminos/piramides-giza.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "En el desierto se alzan gigantes, testigos de un tiempo sin relojes. Fueron soñadas por mentes sabias que miraban al cielo y leían en las estrellas.",
+      "Cada piedra tiene un propósito, cada medida, un secreto. No solo construyeron tumbas de reyes, construyeron caminos hacia la eternidad.",
+      "La sabiduría les enseñó a unir ciencia y alma, a escuchar la naturaleza y respetar el orden. Por eso, aún hoy, las pirámides nos susurran: «Conócete, comprende y deja tu huella con sentido»."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He visto pueblos levantar maravillas con paciencia y conocimiento. Los egipcios entendieron los ciclos del Nilo, las estrellas y la geometría. La sabiduría no es solo acumular datos, sino saber para qué y para quién se construye. Nos enseña que el verdadero legado es el que ayuda a otros a comprender mejor el mundo y su lugar en él. Que cada aprendizaje sea una piedra bien colocada en la gran pirámide de tu vida.",
+
+    preguntaCustodio: "¿Qué conocimiento actual te gustaría que las personas del futuro recordaran de ti?",
+
+    huellaExplorador: "Investiga sobre las pirámides de Egipto: ¿Cómo se construyeron? ¿Qué materiales usaron? Dibuja una maqueta, escribe una leyenda sobre un día en su construcción o crea un código secreto con jeroglíficos inventados. Comparte lo aprendido y lo que más te sorprendió.",
+
+    fraseDestacada: "La sabiduría ilumina el camino y permanece más allá del tiempo."
   },
 
   // ── 12 ─────────────────────────────────────────────────────
