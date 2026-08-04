@@ -279,19 +279,22 @@ const PERGAMINOS = [
     id: "torre-eiffel",
     numero: "Pergamino XII",
     nombre: "Torre Eiffel",
-    palabraFundamental: "[Editar palabra fundamental]",
-    imagen: "",
+    palabraFundamental: "Inspiración",
+    imagen: "img/pergaminos/torre-eiffel.png",
 
     pergamino: [
-      "[Editar texto del pergamino — párrafo 1]",
-      "[Editar texto del pergamino — párrafo 2]",
-      "[Editar texto del pergamino — párrafo 3]"
+      "En el corazón de París, se alza una dama de hierro y cielo. Nació del ingenio y la visión, para ser más alta que los sueños.",
+      "La Torre Eiffel desafió al mundo, mostrando que la creatividad puede convertir lo imposible en un símbolo que inspira libertad.",
+      "Cada estructura cuenta una historia de esfuerzo, colaboración y arte. La inspiración es el viento que empuja nuestras ideas hacia lo más alto."
     ],
 
-    anotacionCustodio: "[Editar anotación del custodio]",
-    preguntaCustodio: "[Editar la pregunta del custodio]",
-    huellaExplorador: "[Editar la huella del explorador]",
-    fraseDestacada: "[Editar frase destacada final]"
+    anotacionCustodio: "He visto creaciones que cambian la forma de ver el mundo. La Torre Eiffel nació como un proyecto temporal, pero su belleza y funcionalidad la hicieron eterna. Nos enseña que innovar es atreverse a pensar distinto y que la inspiración florece cuando unimos ciencia, arte y pasión. Que cada uno de vosotros construya su propia torre de ideas para alcanzar sus metas.",
+
+    preguntaCustodio: "¿Qué idea te gustaría construir para mejorar el mundo que te rodea?",
+
+    huellaExplorador: "Diseña una estructura inspirada en la naturaleza o en una necesidad de tu comunidad. Crea tu maqueta con materiales reciclados. Escribe una breve explicación de tu obra y cómo puede hacer el mundo mejor. Comparte tu proyecto y aprende de los demás.",
+
+    fraseDestacada: "La inspiración transforma ideas en realidad y deja huellas que cruzan el tiempo."
   }
 
 ]; // fin PERGAMINOS
